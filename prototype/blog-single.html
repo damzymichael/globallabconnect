@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Blog Post Title] — Global LabConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand-wrap">
+        <a href="index.html" class="site-logo" aria-label="Global LabConnect home">
+          <img src="assets/img/glc_logo.png" alt="Global LabConnect logo">
+        </a>
+        <span class="prototype-tag">Design prototype</span>
+      </div>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+
+          <!-- Services: 2-Column Dropdown Menu -->
+          <li class="nav-item nav-item--dropdown">
+            <div class="nav-link-dropdown-wrap">
+              <a href="services.html" class="nav-link" id="services-link">Services <span class="dropdown-caret" aria-hidden="true">▾</span></a>
+              <button class="mobile-submenu-toggle" aria-expanded="false" aria-controls="services-submenu" aria-label="Toggle Services submenu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+            <div class="dropdown-menu dropdown-menu--2col" id="services-submenu" aria-label="Services submenu">
+              <div class="dropdown-col">
+                <a href="services.html#pillar-1" class="dropdown-item">
+                  <span class="dropdown-num">1</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">Laboratory Capacity Development</div>
+                    <div class="dropdown-desc">Workforce training &amp; skills enhancement</div>
+                  </div>
+                </a>
+                <a href="services.html#pillar-2" class="dropdown-item">
+                  <span class="dropdown-num">2</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">Equipment Support &amp; Tech Transfer</div>
+                    <div class="dropdown-desc">Equipment sourcing &amp; calibration</div>
+                  </div>
+                </a>
+                <a href="services.html#pillar-3" class="dropdown-item">
+                  <span class="dropdown-num">3</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">Quality Management Systems</div>
+                    <div class="dropdown-desc">ISO 15189 training &amp; accreditation readiness</div>
+                  </div>
+                </a>
+                <a href="services.html#pillar-4" class="dropdown-item">
+                  <span class="dropdown-num">4</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">Diagnostic Services &amp; Assay Scale-Up</div>
+                    <div class="dropdown-desc">Menu expansion &amp; assay validation</div>
+                  </div>
+                </a>
+                <a href="services.html#pillar-5" class="dropdown-item">
+                  <span class="dropdown-num">5</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">Biosafety &amp; Biosecurity</div>
+                    <div class="dropdown-desc">Hazard mitigation &amp; safe lab practice</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-col">
+                <a href="services.html#pillar-6" class="dropdown-item">
+                  <span class="dropdown-num">6</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">Biorepository Development</div>
+                    <div class="dropdown-desc">Standardized biospecimen management</div>
+                  </div>
+                </a>
+                <a href="services.html#pillar-7" class="dropdown-item">
+                  <span class="dropdown-num">7</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">Clinical Trial Laboratory Support</div>
+                    <div class="dropdown-desc">GCLP training &amp; CRO audit readiness</div>
+                  </div>
+                </a>
+                <a href="services.html#pillar-8" class="dropdown-item">
+                  <span class="dropdown-num">8</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">Regulatory &amp; Ethics Support</div>
+                    <div class="dropdown-desc">Ethics submission &amp; compliance guidance</div>
+                  </div>
+                </a>
+                <a href="services.html#pillar-9" class="dropdown-item">
+                  <span class="dropdown-num">9</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">AMR Surveillance</div>
+                    <div class="dropdown-desc">Sentinel networks &amp; antibiogram data</div>
+                  </div>
+                </a>
+                <a href="services.html#pillar-10" class="dropdown-item">
+                  <span class="dropdown-num">10</span>
+                  <div class="dropdown-item-text">
+                    <div class="dropdown-title">Outbreak &amp; Emergency Response</div>
+                    <div class="dropdown-desc">Rapid response &amp; epidemic diagnostic surge</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer">
+                <a href="services.html" class="dropdown-all-link">View All 10 Solutions &rarr;</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="blogs.html" class="nav-link" aria-current="page">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item nav-item--cta-mobile"><a href="contact.html" class="btn btn--primary btn--sm">Partner With Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn--primary btn--sm header-cta-btn">Partner With Us</a>
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="section" style="padding-top: var(--space-xl);">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <a href="blogs.html">Blog</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">[Blog Post Title]</span>
+        </nav>
+
+        <article class="article-body">
+
+          <span class="category-chip">Quality Management Systems</span>
+          <div class="card-meta mt-sm">[20 October 2026] · [Author name] · [8 min read]</div>
+
+          <h1 class="mt-md">[Blog Post Title: Advancing Laboratory Quality Through International Standards and Accreditation]</h1>
+
+          <div class="img-placeholder img-placeholder--hero mt-lg">[Image placeholder: Article hero image]</div>
+
+          <p class="mt-xl">[Placeholder paragraph: This is the opening paragraph of the blog post. It introduces the critical role that rigorous quality management systems play in strengthening diagnostic laboratories. Reliable testing, accurate pathology results, and rapid outbreak detection all hinge upon adherence to robust standards across both public and private health networks.]</p>
+
+          <p>[Placeholder paragraph: The second paragraph expands on the systemic challenges that many regional and district laboratories face, from supply chain instability and equipment maintenance gaps to the need for continuous professional development among laboratory scientists and technical personnel.]</p>
+
+          <h2>The Imperative of International Quality Standards</h2>
+
+          <p>[Placeholder paragraph: Here the article explores international quality frameworks such as ISO 15189 and Good Clinical Laboratory Practice (GCLP). Adopting standardized operating procedures and regular internal audit cycles ensures diagnostic reproducibility and builds trust among clinicians and patients alike.]</p>
+
+          <blockquote class="pull-quote">
+            [Placeholder quote: "Strong laboratories are the foundation of quality healthcare, resilient health systems, and global health security. Investing in standard operating procedures and accreditation readiness saves lives."]
+            <cite>— [Author / Quote attribution]</cite>
+          </blockquote>
+
+          <p>[Placeholder paragraph: Implementing these frameworks requires structured technical assistance, peer mentorship, and external quality assessment (EQA) participation. Laboratories that systematically address compliance gaps demonstrate marked improvements in clinical turn-around times and diagnostic confidence.]</p>
+
+          <h3>Key Steps Toward Accreditation Readiness</h3>
+
+          <ul class="green-list">
+            <li>[Placeholder: Conduct a comprehensive baseline gap assessment against ISO 15189 criteria]</li>
+            <li>[Placeholder: Formulate standard operating procedures (SOPs) and comprehensive quality manuals]</li>
+            <li>[Placeholder: Train laboratory staff on quality documentation, specimen handling, and safety]</li>
+            <li>[Placeholder: Establish routine internal quality audit schedules and corrective action protocols]</li>
+            <li>[Placeholder: Enroll in accredited national or international External Quality Assessment schemes]</li>
+          </ul>
+
+          <p>[Placeholder paragraph: A sustainable quality management journey cannot be achieved overnight. It demands committed leadership, multidisciplinary collaboration, and ongoing monitoring to ensure standards become embedded in daily laboratory workflows rather than treated as a one-time exercise.]</p>
+
+          <p>[Placeholder paragraph: Global LabConnect actively supports healthcare institutions, public laboratories, and research centers in designing and implementing tailored quality management roadmaps that align with international best practices and deliver measurable healthcare impacts.]</p>
+
+          <!-- Share Row -->
+          <div class="share-row">
+            <span>Share:</span>
+            <a href="#" class="share-btn" aria-label="[Share on Twitter / X]">𝕏</a>
+            <a href="#" class="share-btn" aria-label="[Share on LinkedIn]">in</a>
+            <a href="#" class="share-btn" aria-label="[Share via email]">✉</a>
+          </div>
+
+        </article>
+
+        <!-- Related Posts -->
+        <div class="mt-2xl">
+          <h2>Related Posts</h2>
+          <hr class="heading-rule">
+          <div class="related-grid mt-lg">
+            <a href="blog-single.html" class="card card-link">
+              <div class="img-placeholder img-placeholder--sm">[Image placeholder]</div>
+              <div class="card-body">
+                <span class="category-chip">Quality Management Systems</span>
+                <div class="card-meta">[5 August 2026] · [7 min read]</div>
+                <h3 class="card-title">[Related post title about accreditation readiness]</h3>
+                <p class="card-text">[Placeholder excerpt: Practical guidance on preparing diagnostic facilities for accreditation audits and quality reviews.]</p>
+              </div>
+            </a>
+            <a href="blog-single.html" class="card card-link">
+              <div class="img-placeholder img-placeholder--sm">[Image placeholder]</div>
+              <div class="card-body">
+                <span class="category-chip">Biosafety &amp; Biosecurity</span>
+                <div class="card-meta">[22 July 2026] · [5 min read]</div>
+                <h3 class="card-title">[Related post title about biosafety practices]</h3>
+                <p class="card-text">[Placeholder excerpt: Creating safer laboratory environments through internationally accepted best practices and risk assessments.]</p>
+              </div>
+            </a>
+            <a href="blog-single.html" class="card card-link">
+              <div class="img-placeholder img-placeholder--sm">[Image placeholder]</div>
+              <div class="card-body">
+                <span class="category-chip">Training &amp; Capacity Building</span>
+                <div class="card-meta">[28 June 2026] · [4 min read]</div>
+                <h3 class="card-title">[Related post title about workforce development]</h3>
+                <p class="card-text">[Placeholder excerpt: Developing a highly skilled laboratory workforce through continuous professional education and mentorship.]</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CTA Band -->
+  <section class="cta-band" id="partner">
+    <div class="container">
+      <span class="section-label" style="color: rgba(255,255,255,0.6);">Partner With Us</span>
+      <h2>Every Accurate Diagnosis Begins With a Strong Laboratory</h2>
+      <p>Every accurate diagnosis begins with a strong laboratory. Every resilient health system depends on a competent laboratory workforce. Every successful research programme requires quality laboratory services. Together, we can strengthen diagnostics, accelerate research, improve patient care, and build healthier, safer communities worldwide.</p>
+      <a href="contact.html" class="btn btn--primary">Get in Touch</a>
+      <div class="contact-info">
+        <span>📞 <a href="tel:+2349129054546">+234-912-905-4546</a></span>
+        <span>📞 <a href="tel:+2348032424965">+234-803-242-4965</a></span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo" aria-label="Global LabConnect home"><img src="assets/img/glc_logo.png" alt="Global LabConnect logo"></a>
+          <p>Connecting Laboratories. Empowering Professionals. Advancing Global Health.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>📞 <a href="tel:+2349129054546">+234-912-905-4546</a></p>
+          <p>📞 <a href="tel:+2348032424965">+234-803-242-4965</a></p>
+          <p>🌐 www.eclaboratory.com</p>
+          <p style="font-size:0.75rem; margin-top:4px; color: rgba(255,255,255,0.4);">[Confirm website and contact details with client]</p>
+        </div>
+        <div class="footer-legal">
+          <h3>Legal</h3>
+          <p>RC 9435175</p>
+          <p>[Placeholder: Additional legal info]</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Design prototype — not the live site</span>
+        <span>[Placeholder: © year]</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
