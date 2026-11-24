@@ -9,12 +9,12 @@
     <nav class="hidden lg:flex items-center justify-center gap-space-lg mx-auto">
       <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent" href="index.html">Home</a>
       <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent" href="about.html">About</a>
-      <div class="relative py-2" id="services-dropdown-container">
-        <button id="services-menu-button" aria-expanded="false" class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-1 cursor-pointer focus:outline-none pb-0.5 border-b-2 border-transparent" type="button">
+      <div class="relative py-2 group" id="services-dropdown-container">
+        <a id="services-menu-link" class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-1 cursor-pointer focus:outline-none pb-0.5 border-b-2 border-transparent" href="services.html">
           <span>Services</span>
-          <span id="services-chevron" class="material-symbols-outlined text-[18px] transition-transform duration-200 text-outline">expand_more</span>
-        </button>
-        <div id="services-dropdown-menu" class="absolute left-1/2 -translate-x-1/2 top-full pt-2 hidden z-50 w-[580px]">
+          <span id="services-chevron" class="material-symbols-outlined text-[18px] transition-transform duration-200 text-outline group-hover:rotate-180">expand_more</span>
+        </a>
+        <div id="services-dropdown-menu" class="absolute left-1/2 -translate-x-1/2 top-full pt-2 hidden group-hover:block z-50 w-[600px]">
           <div class="bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/40 p-4 grid grid-cols-2 gap-2 text-left">
             <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#laboratory-capacity">
               <div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
@@ -79,6 +79,24 @@
                 <div class="text-[12px] leading-tight text-on-surface-variant">Research laboratory readiness</div>
               </div>
             </a>
+            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#regulatory-ethics">
+              <div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
+                <span class="material-symbols-outlined text-[18px]">gavel</span>
+              </div>
+              <div>
+                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">Regulatory &amp; Ethics</div>
+                <div class="text-[12px] leading-tight text-on-surface-variant">Compliance &amp; governance</div>
+              </div>
+            </a>
+            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#amr-surveillance">
+              <div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[18px]">coronavirus</span>
+              </div>
+              <div>
+                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">AMR Surveillance</div>
+                <div class="text-[12px] leading-tight text-on-surface-variant">Antimicrobial monitoring</div>
+              </div>
+            </a>
             <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#outbreak-investigation">
               <div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
                 <span class="material-symbols-outlined text-[18px]">emergency</span>
@@ -93,10 +111,10 @@
       </div>
       <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent" href="projects.html">Projects</a>
       <a aria-current="page" class="font-label-lg text-label-lg transition-colors text-primary-container font-semibold border-b-2 border-primary-container pb-0.5" href="blogs.html">Blog</a>
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent" href="#contact">Contact</a>
+      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent" href="contact.html">Contact</a>
     </nav>
     <div class="flex items-center gap-3 md:gap-space-lg shrink-0">
-      <a class="hidden sm:inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary hover:text-on-primary font-label-lg text-label-lg px-6 lg:px-7 py-2.5 lg:py-3 transition-colors whitespace-nowrap shadow-sm" href="#contact">Partner With Us</a>
+      <a class="hidden sm:inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary hover:text-on-primary font-label-lg text-label-lg px-6 lg:px-7 py-2.5 lg:py-3 transition-colors whitespace-nowrap shadow-sm" href="contact.html">Partner With Us</a>
       <button id="mobile-menu-btn" class="lg:hidden p-2 text-on-surface hover:text-primary-container focus:outline-none flex items-center justify-center" aria-label="Toggle menu" type="button">
         <span id="mobile-menu-icon" class="material-symbols-outlined text-[28px]">menu</span>
       </button>
@@ -140,6 +158,14 @@
             <span class="material-symbols-outlined text-[18px] text-primary-container">science</span>
             <span>Clinical Trial Support</span>
           </a>
+          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#regulatory-ethics">
+            <span class="material-symbols-outlined text-[18px] text-secondary">gavel</span>
+            <span>Regulatory &amp; Ethics</span>
+          </a>
+          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#amr-surveillance">
+            <span class="material-symbols-outlined text-[18px] text-primary-container">coronavirus</span>
+            <span>AMR Surveillance</span>
+          </a>
           <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#outbreak-investigation">
             <span class="material-symbols-outlined text-[18px] text-secondary">emergency</span>
             <span>Outbreak Response</span>
@@ -148,9 +174,9 @@
       </div>
       <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors" href="projects.html">Projects</a>
       <a class="font-label-lg text-label-lg text-primary-container font-bold py-2 transition-colors" href="blogs.html">Blog</a>
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors" href="#contact">Contact</a>
+      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors" href="contact.html">Contact</a>
       <div class="pt-2 sm:hidden">
-        <a class="w-full inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg py-3 transition-colors shadow-sm" href="#contact">Partner With Us</a>
+        <a class="w-full inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg py-3 transition-colors shadow-sm" href="contact.html">Partner With Us</a>
       </div>
     </div>
   </div>
@@ -519,10 +545,10 @@
       </p>
 <!-- Dual CTA Buttons -->
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-<a class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary-container px-8 py-3.5 font-label-lg text-label-lg text-on-primary hover:bg-primary transition-all shadow-[0_4px_20px_rgba(139,0,0,0.35)]" href="#contact">
+<a class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary-container px-8 py-3.5 font-label-lg text-label-lg text-on-primary hover:bg-primary transition-all shadow-[0_4px_20px_rgba(139,0,0,0.35)]" href="contact.html">
           Partner With Us
         </a>
-<a class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-surface-container-lowest/10 backdrop-blur-md px-8 py-3.5 font-label-lg text-label-lg text-on-primary hover:bg-surface-container-lowest/20 transition-all" href="#contact">
+<a class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-surface-container-lowest/10 backdrop-blur-md px-8 py-3.5 font-label-lg text-label-lg text-on-primary hover:bg-surface-container-lowest/20 transition-all" href="contact.html">
           Speak to a Specialist
         </a>
 </div>
@@ -561,7 +587,7 @@
           <li><a class="hover:text-white transition-colors" href="services.html">Our Solutions</a></li>
           <li><a class="hover:text-white transition-colors" href="projects.html">Projects &amp; Impact</a></li>
           <li><a class="text-secondary-fixed font-semibold" href="blogs.html">Blog &amp; Publications</a></li>
-          <li><a class="hover:text-white transition-colors" href="#contact">Contact</a></li>
+          <li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li>
         </ul>
       </div>
 
@@ -621,36 +647,8 @@
 </footer>
 
 <script>
-  // Services dropdown toggle on click & mobile menu toggle
+  // Mobile menu toggle & mobile services accordion
   document.addEventListener('DOMContentLoaded', function () {
-    const servicesBtn = document.getElementById('services-menu-button');
-    const servicesMenu = document.getElementById('services-dropdown-menu');
-    const servicesChevron = document.getElementById('services-chevron');
-
-    if (servicesBtn && servicesMenu) {
-      servicesBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        const isHidden = servicesMenu.classList.contains('hidden');
-        if (isHidden) {
-          servicesMenu.classList.remove('hidden');
-          servicesBtn.setAttribute('aria-expanded', 'true');
-          if (servicesChevron) servicesChevron.classList.add('rotate-180');
-        } else {
-          servicesMenu.classList.add('hidden');
-          servicesBtn.setAttribute('aria-expanded', 'false');
-          if (servicesChevron) servicesChevron.classList.remove('rotate-180');
-        }
-      });
-
-      document.addEventListener('click', function (e) {
-        if (!servicesMenu.contains(e.target) && !servicesBtn.contains(e.target)) {
-          servicesMenu.classList.add('hidden');
-          servicesBtn.setAttribute('aria-expanded', 'false');
-          if (servicesChevron) servicesChevron.classList.remove('rotate-180');
-        }
-      });
-    }
-
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuIcon = document.getElementById('mobile-menu-icon');
