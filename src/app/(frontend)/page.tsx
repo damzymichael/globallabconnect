@@ -1,50 +1,64 @@
 import React from 'react'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Icon from '../../components/Icon'
 
 export default function HomePage() {
   return (
     <main className="w-full pt-20 bg-surface">
-  <div className="flex flex-col w-full">
-    {/* Section 1: Hero */}
-    <section className="relative w-full bg-inverse-surface text-inverse-on-surface overflow-hidden">
-      <div className="absolute inset-0 w-full h-full pointer-events-none">
-        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-3/5 h-full">
-          <img className="w-full h-full object-cover object-center opacity-75 lg:opacity-90" data-alt="Natural-light editorial photograph of a focused laboratory scientist in a crisp white lab coat and blue nitrile gloves examining diagnostic samples under a modern microscope in a bright, clean clinical laboratory, soft depth of field, cool neutral and subtle sage tones, high-clarity institutional healthcare photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRwGfHrtE2yx4EMGNOX17737H1vH3idqcE_ieX8mlbpfd5ZLfepMYrb2N4qPpU66YzM-S-R_qy8E4tdZsGGURzeh0D2KBn4MYvQQssDnN5XvxXru43dm6_R-u-0CLphn0QMOnP9wvAy2pa9j7BJvoG3V1UFEoYxYiiXfClAJp7S2I6l1rBRWxQvFiEZ5xDexqJpf0anngRK9Hl-R3teDbiYIa78SVomGNanOrNc9w" />
-          <div className="absolute inset-0 bg-linear-to-r from-inverse-surface via-inverse-surface/80 to-transparent"></div>
-          <div className="absolute inset-0 bg-linear-to-t from-inverse-surface/60 via-transparent to-inverse-surface/30 lg:hidden"></div>
-          </div>
-        </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-24 lg:py-36">
-        <div className="max-w-2xl flex flex-col gap-6">
-          <h1 className="font-display-lg text-display-lg text-on-primary">
-                Access To Global Laboratory Innovation &amp; Diagnostic
-              </h1>
-          <p className="font-body-lg text-body-lg text-inverse-on-surface/90 max-w-xl">
-                Connecting Laboratories. Empowering Professionals. Advancing Global Health.
-              </p>
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <a className="inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-7 py-3.5 transition-colors shadow-md" data-path="partner-with-us" href="#">
-                  Partner With Us
-                </a>
-            <a className="inline-flex items-center justify-center rounded-full bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-lg text-label-lg px-7 py-3.5 transition-colors shadow-md" href="#our-solutions">
-                  Explore Our Solutions
-                </a>
+      <div className="flex flex-col w-full">
+        {/* Section 1: Hero */}
+        <section className="relative w-full bg-inverse-surface text-inverse-on-surface overflow-hidden">
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            <div className="absolute right-0 top-0 bottom-0 w-full lg:w-3/5 h-full">
+              <img
+                className="w-full h-full object-cover object-center opacity-75 lg:opacity-90"
+                data-alt="Natural-light editorial photograph of a focused laboratory scientist in a crisp white lab coat and blue nitrile gloves examining diagnostic samples under a modern microscope in a bright, clean clinical laboratory, soft depth of field, cool neutral and subtle sage tones, high-clarity institutional healthcare photography"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRwGfHrtE2yx4EMGNOX17737H1vH3idqcE_ieX8mlbpfd5ZLfepMYrb2N4qPpU66YzM-S-R_qy8E4tdZsGGURzeh0D2KBn4MYvQQssDnN5XvxXru43dm6_R-u-0CLphn0QMOnP9wvAy2pa9j7BJvoG3V1UFEoYxYiiXfClAJp7S2I6l1rBRWxQvFiEZ5xDexqJpf0anngRK9Hl-R3teDbiYIa78SVomGNanOrNc9w"
+              />
+              <div className="absolute inset-0 bg-linear-to-r from-inverse-surface via-inverse-surface/80 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-inverse-surface/60 via-transparent to-inverse-surface/30 lg:hidden"></div>
             </div>
           </div>
-        </div>
-      </section>
-    {/* Section 2: About + Vision & Mission */}
-    <section className="w-full bg-surface-container-lowest text-on-surface">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="lg:col-span-6 flex flex-col gap-5">
-            <h2 className="font-headline-lg text-headline-lg text-on-surface">
+          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-24 lg:py-36">
+            <div className="max-w-2xl flex flex-col gap-6">
+              <h1 className="font-display-lg text-display-lg text-on-primary">
+                Innovations and Diagnostics
+              </h1>
+              <p className="font-body-lg text-body-lg text-inverse-on-surface/90 max-w-xl">
+                Connecting Laboratories. Empowering Professionals. Advancing Global Health.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <a
+                  className="inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-7 py-3.5 transition-colors shadow-md"
+                  data-path="partner-with-us"
+                  href="#"
+                >
+                  Partner With Us
+                </a>
+                <a
+                  className="inline-flex items-center justify-center rounded-full bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-lg text-label-lg px-7 py-3.5 transition-colors shadow-md"
+                  href="#our-solutions"
+                >
+                  Explore Our Solutions
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Section 2: About + Vision & Mission */}
+        <section className="w-full bg-surface-container-lowest text-on-surface">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              <div className="lg:col-span-6 flex flex-col gap-5">
+                <h2 className="font-headline-lg text-headline-lg text-on-surface">
                   About Global LabConnect (GLC)
                 </h2>
-            <p className="font-title-lg text-title-lg text-primary-container">
+                <p className="font-title-lg text-title-lg text-primary-container">
                   Strengthening Laboratories. Transforming Healthcare.
                 </p>
-            <div className="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
-              <p>
+                <div className="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
+                  <p>
                     Global LabConnect (GLC) is an independent, non-governmental organization
                     dedicated to strengthening laboratory systems through collaboration, innovation,
                     capacity building, and strategic partnerships. We work with hospitals, public
@@ -52,352 +66,382 @@ export default function HomePage() {
                     partners to build workforce capacity, enhance diagnostic quality, clinical
                     research, and outbreak preparedness.
                   </p>
-              <p>
+                  <p>
                     As a collaborative platform, GLC promotes excellence in laboratory medicine
                     through sustainable partnerships and evidence-based solutions, we help build
                     resilient laboratory systems that improve patient outcomes and public health.
                   </p>
+                </div>
               </div>
-            </div>
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-            <div className="rounded-xl overflow-hidden shadow-md bg-surface-container-low">
-              <img className="w-full h-64 object-cover object-center" data-alt="Clean natural-light photograph of a medical laboratory scientist working inside a biosafety cabinet with precision pipettes and diagnostic trays in a modern, well-lit clinical research facility, crisp white and soft sage tones, authentic documentary healthcare style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCOxe1m-fc0xvnlMCf0iyQk6Ww4NobjDvuZwOUNCGi5zEvMZJER5PjpV6SIJwzTjg1J1Fudi5YrKtOyWOb58ba6eOQdYopnLQYOTNcpEKPkWgkM37r2rykvCIfaDru0Esp7acuRBNHJ04-H5KpPy44uPf_cOqPLM8YaFnE_-4JDBtSofPtaO0CN_OWdvek-9S_yeyKvtu6CXGiRHAjSw3_zfTnG_ygSxxoKmtpo_s" />
-              </div>
-            <div className="rounded-xl overflow-hidden shadow-md bg-surface-container-low">
-              <img className="w-full h-64 object-cover object-center" data-alt="Natural-light photograph of two laboratory professionals collaborating over digital diagnostic data and microscope slides at a modern laboratory bench, wearing lab coats and protective gloves, bright clinical environment with subtle green and neutral accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl5TTNgXCgT7CaXKqZJIlRtLZmMLw0IXCBvYzc1DCBKIHre5eAp7CrGpNsqtfvKZeZHlFk65DHrGnPWCw50EVUywh_MJ6dKeJ5QoehOc3nJvt-KQeh7tdOX5UwFVi9EvmASMh81tugfkPFr_jnfYSp1Vrsp9exMLV01l3Gkr_3pvkETN5kAtKcUyWb9YiW8BtI4h_pXfML0eWsFGh8oJISvg0sZVp-WCzeuNsBtQc" />
+              <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+                <div className="rounded-xl overflow-hidden shadow-md bg-surface-container-low">
+                  <img
+                    className="w-full h-64 object-cover object-center"
+                    data-alt="Clean natural-light photograph of a medical laboratory scientist working inside a biosafety cabinet with precision pipettes and diagnostic trays in a modern, well-lit clinical research facility, crisp white and soft sage tones, authentic documentary healthcare style"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCOxe1m-fc0xvnlMCf0iyQk6Ww4NobjDvuZwOUNCGi5zEvMZJER5PjpV6SIJwzTjg1J1Fudi5YrKtOyWOb58ba6eOQdYopnLQYOTNcpEKPkWgkM37r2rykvCIfaDru0Esp7acuRBNHJ04-H5KpPy44uPf_cOqPLM8YaFnE_-4JDBtSofPtaO0CN_OWdvek-9S_yeyKvtu6CXGiRHAjSw3_zfTnG_ygSxxoKmtpo_s"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden shadow-md bg-surface-container-low">
+                  <img
+                    className="w-full h-64 object-cover object-center"
+                    data-alt="Natural-light photograph of two laboratory professionals collaborating over digital diagnostic data and microscope slides at a modern laboratory bench, wearing lab coats and protective gloves, bright clinical environment with subtle green and neutral accents"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl5TTNgXCgT7CaXKqZJIlRtLZmMLw0IXCBvYzc1DCBKIHre5eAp7CrGpNsqtfvKZeZHlFk65DHrGnPWCw50EVUywh_MJ6dKeJ5QoehOc3nJvt-KQeh7tdOX5UwFVi9EvmASMh81tugfkPFr_jnfYSp1Vrsp9exMLV01l3Gkr_3pvkETN5kAtKcUyWb9YiW8BtI4h_pXfML0eWsFGh8oJISvg0sZVp-WCzeuNsBtQc"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      {/* Vision & Mission Band */}
-      <div className="w-full bg-surface-container-low py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-surface-container-lowest rounded-xl p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
-              <div className="w-14 h-14 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[28px]">visibility</span>
-                </div>
-              <h3 className="font-headline-sm text-headline-sm text-on-surface">Our Vision</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+          {/* Vision & Mission Band */}
+          <div className="w-full bg-surface-container-low py-16 lg:py-24">
+            <div className="max-w-7xl mx-auto px-6 lg:px-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-surface-container-lowest rounded-xl p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+                  <div className="w-14 h-14 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0">
+                    <Icon name="visibility" className=" text-[28px]" />
+                  </div>
+                  <h3 className="font-headline-sm text-headline-sm text-on-surface">Our Vision</h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     To transform laboratory systems into robust, innovative, and responsive pillars
                     of healthcare delivery, research excellence, and public health preparedness.
                   </p>
-              </div>
-            <div className="bg-surface-container-lowest rounded-xl p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
-              <div className="w-14 h-14 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-[28px]">flag</span>
                 </div>
-              <h3 className="font-headline-sm text-headline-sm text-on-surface">Our Mission</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                <div className="bg-surface-container-lowest rounded-xl p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4">
+                  <div className="w-14 h-14 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0">
+                    <Icon name="flag" className=" text-[28px]" />
+                  </div>
+                  <h3 className="font-headline-sm text-headline-sm text-on-surface">Our Mission</h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     To strengthen laboratory systems by advancing diagnostic quality, workforce
                     excellence, research, innovation, strategic partnerships, and sustainable public
                     health solutions.
                   </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    {/* Section 3: Our Solutions Overview */}
-    <section className="w-full bg-surface-container-lowest text-on-surface py-20 lg:py-28" id="our-solutions">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16">
-        <div className="text-center max-w-2xl mx-auto">
-          <h2 className="font-headline-lg text-headline-lg text-on-surface">Our Solutions</h2>
-          </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {/* 1 */}
-          <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-4">
-            <div className="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0">
-              <span className="material-symbols-outlined text-[24px]">groups</span>
-              </div>
-            <h3 className="font-title-lg text-title-lg text-on-surface">
+        </section>
+        {/* Section 3: Our Solutions Overview */}
+        <section
+          className="w-full bg-surface-container-lowest text-on-surface py-20 lg:py-28"
+          id="our-solutions"
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16">
+            <div className="text-center max-w-2xl mx-auto">
+              <h2 className="font-headline-lg text-headline-lg text-on-surface">Our Solutions</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              {/* 1 */}
+              <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0">
+                  <Icon name="groups" className=" text-[24px]" />
+                </div>
+                <h3 className="font-title-lg text-title-lg text-on-surface">
                   Laboratory Capacity Development
                 </h3>
-            <p className="font-body-sm text-body-sm text-on-surface-variant">
+                <p className="font-body-sm text-body-sm text-on-surface-variant">
                   Developing a highly skilled laboratory workforce for sustainable health systems.
                 </p>
-            </div>
-          {/* 2 */}
-          <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-4">
-            <div className="w-12 h-12 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0">
-              <span className="material-symbols-outlined text-[24px]">precision_manufacturing</span>
               </div>
-            <h3 className="font-title-lg text-title-lg text-on-surface">
+              {/* 2 */}
+              <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0">
+                  <Icon name="precision_manufacturing" className=" text-[24px]" />
+                </div>
+                <h3 className="font-title-lg text-title-lg text-on-surface">
                   Equipment Support &amp; Technology Transfer
                 </h3>
-            <p className="font-body-sm text-body-sm text-on-surface-variant">
+                <p className="font-body-sm text-body-sm text-on-surface-variant">
                   Expanding access to modern, reliable and sustainable diagnostic technologies.
                 </p>
-            </div>
-          {/* 3 */}
-          <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-4">
-            <div className="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0">
-              <span className="material-symbols-outlined text-[24px]">verified</span>
               </div>
-            <h3 className="font-title-lg text-title-lg text-on-surface">
+              {/* 3 */}
+              <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0">
+                  <Icon name="verified" className=" text-[24px]" />
+                </div>
+                <h3 className="font-title-lg text-title-lg text-on-surface">
                   Quality Management Systems
                 </h3>
-            <p className="font-body-sm text-body-sm text-on-surface-variant">
+                <p className="font-body-sm text-body-sm text-on-surface-variant">
                   Helping laboratories achieve international quality standards and accreditation.
                 </p>
+              </div>
+            </div>
+            <div className="text-center pt-2">
+              <a
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-8 py-3.5 transition-all shadow-md hover:shadow-lg"
+                href="/services"
+              >
+                <span>View More Solutions</span>
+                <Icon name="arrow_forward" className=" text-[18px]" />
+              </a>
             </div>
           </div>
-        <div className="text-center pt-2">
-          <a className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-8 py-3.5 transition-all shadow-md hover:shadow-lg" href="/services">
-            <span>View More Solutions</span>
-            <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-            </a>
-          </div>
-        </div>
-      </section>
-    {/* Section 4: Why Choose GLC + Our Value Proposition */}
-    <section className="w-full bg-surface-container-low text-on-surface py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16">
-        <div className="max-w-3xl flex flex-col gap-4">
-          <h2 className="font-headline-lg text-headline-lg text-on-surface">
+        </section>
+        {/* Section 4: Why Choose GLC + Our Value Proposition */}
+        <section className="w-full bg-surface-container-low text-on-surface py-20 lg:py-28">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16">
+            <div className="max-w-3xl flex flex-col gap-4">
+              <h2 className="font-headline-lg text-headline-lg text-on-surface">
                 Why Choose Global LabConnect
               </h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant">
+              <p className="font-body-lg text-body-lg text-on-surface-variant">
                 GLC provides practical, sustainable, and high-impact laboratory solutions tailored
                 to the needs of healthcare institutions, research organizations, governments and
                 development partners.
               </p>
-          </div>
-        <div className="flex flex-col gap-6">
-          <h3 className="font-title-lg text-title-lg text-primary-container font-semibold">
+            </div>
+            <div className="flex flex-col gap-6">
+              <h3 className="font-title-lg text-title-lg text-primary-container font-semibold">
                 Our Value Proposition
               </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 mt-0.5">
-                <span className="material-symbols-outlined text-[24px] font-bold">check</span>
-                </div>
-              <div>
-                <h4 className="font-title-md text-title-md text-on-surface font-semibold mb-2">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+                    <Icon name="check" className=" text-[24px] font-bold" />
+                  </div>
+                  <div>
+                    <h4 className="font-title-md text-title-md text-on-surface font-semibold mb-2">
                       Multidisciplinary laboratory expertise
                     </h4>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">
                       Cross-cutting specialist teams across clinical pathology, genomics, biomedical
                       engineering, and health informatics.
                     </p>
+                  </div>
                 </div>
-              </div>
-            <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 mt-0.5">
-                <span className="material-symbols-outlined text-[24px] font-bold">check</span>
-                </div>
-              <div>
-                <h4 className="font-title-md text-title-md text-on-surface font-semibold mb-2">
+                <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 mt-0.5">
+                    <Icon name="check" className=" text-[24px] font-bold" />
+                  </div>
+                  <div>
+                    <h4 className="font-title-md text-title-md text-on-surface font-semibold mb-2">
                       International best practices
                     </h4>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">
                       Aligned with ISO 15189, CLIA, CAP, and WHO standards to guarantee clinical
                       accuracy and operational rigor.
                     </p>
+                  </div>
                 </div>
-              </div>
-            <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 mt-0.5">
-                <span className="material-symbols-outlined text-[24px] font-bold">check</span>
-                </div>
-              <div>
-                <h4 className="font-title-md text-title-md text-on-surface font-semibold mb-2">
+                <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+                    <Icon name="check" className=" text-[24px] font-bold" />
+                  </div>
+                  <div>
+                    <h4 className="font-title-md text-title-md text-on-surface font-semibold mb-2">
                       Public–private partnership model
                     </h4>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">
                       Bridging ministerial health agendas with cutting-edge private industry
                       diagnostics and research institutions.
                     </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    {/* Section 5: Core Pillars of Global LabConnect (10 Numbered Pillars) */}
-    <section className="w-full bg-surface-container-lowest text-on-surface py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16">
-        <div className="max-w-3xl">
-          <h2 className="font-headline-lg text-headline-lg text-on-surface mb-4">
+        </section>
+        {/* Section 5: Core Pillars of Global LabConnect (10 Numbered Pillars) */}
+        <section className="w-full bg-surface-container-lowest text-on-surface py-20 lg:py-28">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16">
+            <div className="max-w-3xl">
+              <h2 className="font-headline-lg text-headline-lg text-on-surface mb-4">
                 Core Pillars of Global LabConnect
               </h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant">
+              <p className="font-body-lg text-body-lg text-on-surface-variant">
                 Ten structured domains delivering resilient laboratory infrastructure, quality
                 diagnostics, and public health impact worldwide.
               </p>
-          </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {/* Pillar 1 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {/* Pillar 1 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
                   01
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Training &amp; Capacity Building
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Developing a skilled and competent laboratory workforce.
                   </p>
+                </div>
               </div>
-            </div>
-          {/* Pillar 2 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
+              {/* Pillar 2 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
                   02
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Equipment Support &amp; Technology Transfer
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Expanding access to modern, reliable and sustainable diagnostic technologies.
                   </p>
+                </div>
               </div>
-            </div>
-          {/* Pillar 3 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
+              {/* Pillar 3 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
                   03
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Quality Management Systems
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Ensuring quality excellence through international standards and accreditation.
                   </p>
+                </div>
               </div>
-            </div>
-          {/* Pillar 4 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
+              {/* Pillar 4 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
                   04
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Diagnostic Services &amp; Assay Scale-Up
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Improving access to accurate and timely diagnostic service.
                   </p>
+                </div>
               </div>
-            </div>
-          {/* Pillar 5 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
+              {/* Pillar 5 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
                   05
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Biosafety &amp; Biosecurity
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Promoting safe laboratory practices and protecting people and communities.
                   </p>
+                </div>
               </div>
-            </div>
-          {/* Pillar 6 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
+              {/* Pillar 6 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
                   06
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Biorepository Development
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Strengthening research through high-quality biospecimen management.
                   </p>
+                </div>
               </div>
-            </div>
-          {/* Pillar 7 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
+              {/* Pillar 7 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
                   07
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Clinical Trial Laboratory Support
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Supporting high-quality laboratories for world-class clinical research.
                   </p>
+                </div>
               </div>
-            </div>
-          {/* Pillar 8 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
+              {/* Pillar 8 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
                   08
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Regulatory &amp; Ethics Support
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Facilitating compliance with ethical, regulatory and policy requirements.
                   </p>
+                </div>
               </div>
-            </div>
-          {/* Pillar 9 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
+              {/* Pillar 9 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
                   09
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Antimicrobial Resistance Surveillance
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Combating antimicrobial resistance through surveillance, data and collaboration.
                   </p>
+                </div>
               </div>
-            </div>
-          {/* Pillar 10 */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-            <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
+              {/* Pillar 10 */}
+              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
+                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
                   10
                 </div>
-            <div>
-              <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                <div>
+                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
                     Outbreak Investigation &amp; Emergency Response
                   </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+                  <p className="font-body-md text-body-md text-on-surface-variant">
                     Enhancing preparedness and response to public health emergencies.
                   </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    {/* Section 6: Pre-Footer CTA Band: Partner With Us */}
-    <section className="relative w-full py-20 lg:py-28 bg-inverse-surface overflow-hidden" id="partner-with-us">
-      {/* Atmospheric Laboratory Image with 85% Overlay */}
-      <div className="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-15" data-alt="A modern bioanalytical laboratory at twilight with automated robotic analyzers, microplates, and scientists conducting diagnostic tests with glowing LED indicators in deep forest charcoal and clinical emerald green." style={{"backgroundImage":"url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc')"}}></div>
-      <div className="absolute inset-0 bg-linear-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
-      <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
-        <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block">
+        </section>
+        {/* Section 6: Pre-Footer CTA Band: Partner With Us */}
+        <section
+          className="relative w-full py-20 lg:py-28 bg-inverse-surface overflow-hidden"
+          id="partner-with-us"
+        >
+          {/* Atmospheric Laboratory Image with 85% Overlay */}
+          <div
+            className="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-15"
+            data-alt="A modern bioanalytical laboratory at twilight with automated robotic analyzers, microplates, and scientists conducting diagnostic tests with glowing LED indicators in deep forest charcoal and clinical emerald green."
+            style={{
+              backgroundImage:
+                "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc')",
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-linear-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
+          <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block">
               Collaborative Healthcare Innovation
             </span>
-        <h2 className="font-headline-lg text-headline-lg text-white mb-6">Partner With Us</h2>
-        <p className="font-body-lg text-body-lg text-inverse-on-surface/90 mb-10 leading-relaxed">
+            <h2 className="font-headline-lg text-headline-lg text-white mb-6">Partner With Us</h2>
+            <p className="font-body-lg text-body-lg text-inverse-on-surface/90 mb-10 leading-relaxed">
               Every accurate diagnosis begins with a strong laboratory. Every resilient health
               system depends on a competent laboratory workforce. Every successful research
               programme requires quality laboratory services. Together, we can strengthen
               diagnostics, accelerate research, improve patient care, and build healthier, safer
               communities worldwide.
             </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-8 py-3.5 transition-all shadow-md hover:shadow-lg" href="/contact">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-8 py-3.5 transition-all shadow-md hover:shadow-lg"
+                href="/contact"
+              >
                 Partner With Us
               </a>
-          <a className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all" href="/contact">
+              <a
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all"
+                href="/contact"
+              >
                 Speak to a Specialist
               </a>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
-  </main>
+        </section>
+      </div>
+    </main>
   )
 }

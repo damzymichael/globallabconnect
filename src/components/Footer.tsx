@@ -1,7 +1,26 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { Phone, Mail, Globe } from 'lucide-react'
 
 export default function Footer() {
+  const pathname = usePathname()
+
+  const isActive = (path: string) => {
+    if (path === '/' && pathname === '/') return true
+    if (path !== '/' && pathname.startsWith(path)) return true
+    return false
+  }
+
+  const getFooterLinkClass = (path: string) => {
+    if (isActive(path)) {
+      return 'text-secondary-fixed font-semibold transition-colors'
+    }
+    return 'hover:text-white transition-colors text-inverse-on-surface/70'
+  }
+
   return (
     <footer
       className="w-full bg-[#0D1310] text-[#eaf3ea] border-t border-white/10 pt-16 pb-12"
@@ -15,7 +34,7 @@ export default function Footer() {
               <img
                 alt="Global LabConnect"
                 className="h-8 w-auto object-contain brightness-0 invert"
-                src="https://lh3.googleusercontent.com/aida/ALJJyrC7khK5IRYWi2y3fvG8zDMo8n47kdy_Et1-MPECErgFLG2pGCKYk_-6Tlaci3yfp8G2e3CiCPG8DlR8vYZQmquV0_1ADHlkIr1dswjT3jocm0e7wsicVaDDfM560Ze7rcMJqfnxUwxslhFHXsiJfnPOuJuSgo6NmVKoVtIW8zn64rIQtJYxaCbKmVYmMU4OeLhejfIG58BHpYcI2-KDICqoxZKUDokzYwLwRIVDLTCcBbDxgD7UBW-dGPE"
+                src="/glc_logo.png"
               />
             </Link>
             <p className="font-body-sm text-body-sm text-inverse-on-surface/70 leading-relaxed max-w-sm">
@@ -38,34 +57,34 @@ export default function Footer() {
             <div className="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">
               Quick Links
             </div>
-            <ul className="space-y-2.5 font-body-sm text-body-sm text-inverse-on-surface/70">
+            <ul className="space-y-2.5 font-body-sm text-body-sm">
               <li>
-                <Link className="hover:text-white transition-colors" href="/">
+                <Link className={getFooterLinkClass('/')} href="/">
                   Home
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-white transition-colors" href="/about">
+                <Link className={getFooterLinkClass('/about')} href="/about">
                   About GLC
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-white transition-colors" href="/services">
+                <Link className={getFooterLinkClass('/services')} href="/services">
                   Our Solutions
                 </Link>
               </li>
-              <li>
-                <Link className="hover:text-white transition-colors" href="/projects">
+              {/* <li>
+                <Link className={getFooterLinkClass('/projects')} href="/projects">
                   Projects &amp; Impact
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-white transition-colors" href="/blogs">
+                <Link className={getFooterLinkClass('/blogs')} href="/blogs">
                   Blog &amp; Publications
                 </Link>
-              </li>
+              </li> */}
               <li>
-                <Link className="hover:text-white transition-colors" href="/contact">
+                <Link className={getFooterLinkClass('/contact')} href="/contact">
                   Contact
                 </Link>
               </li>
@@ -136,7 +155,7 @@ export default function Footer() {
             </div>
             <div className="space-y-3 font-body-sm text-body-sm text-inverse-on-surface/80">
               <div className="flex items-center gap-2.5">
-                <span className="material-symbols-outlined text-secondary-fixed text-lg">call</span>
+                <Phone className="w-4 h-4 text-secondary-fixed shrink-0" />
                 <div className="flex flex-col">
                   <a className="hover:text-white transition-colors" href="tel:+2348032424965">
                     +234-803-242-4965
@@ -147,9 +166,12 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="material-symbols-outlined text-secondary-fixed text-lg">mail</span>
+                <Mail className="w-4 h-4 text-secondary-fixed shrink-0" />
                 <div className="flex flex-col">
-                  <a className="hover:text-white transition-colors" href="mailto:info@eclaboratory.com">
+                  <a
+                    className="hover:text-white transition-colors"
+                    href="mailto:info@eclaboratory.com"
+                  >
                     info@eclaboratory.com
                   </a>
                   <a
@@ -161,9 +183,7 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="material-symbols-outlined text-secondary-fixed text-lg">
-                  language
-                </span>
+                <Globe className="w-4 h-4 text-secondary-fixed shrink-0" />
                 <a
                   className="hover:text-white transition-colors"
                   href="https://www.eclaboratory.com"

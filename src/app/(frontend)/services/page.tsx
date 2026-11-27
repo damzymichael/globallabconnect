@@ -1,8 +1,12 @@
-import React from 'react'
+import Link from 'next/link'
+import { ChevronRight } from 'lucide-react'
+import Icon from '@/components/Icon'
+import ServicesPageInteractions from '@/components/ServicePageInteraction'
 
 export default function ServicesPage() {
   return (
-    <main className="w-full pt-20 bg-surface">
+    <main className="w-full pt-20 bg-surface ">
+      <ServicesPageInteractions />
       <div className="flex flex-col w-full">
         {/* Compact Hero Section with Dark Atmospheric Laboratory Tone */}
         <section className="relative w-full -mt-20 pt-32 pb-20 md:pb-28 bg-inverse-surface overflow-hidden">
@@ -18,18 +22,16 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-linear-to-r from-inverse-surface via-inverse-surface/90 to-inverse-surface/80"></div>
           <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
             {/* Breadcrumb */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 mb-6">
-              <a
-                className="font-label-sm text-label-sm text-secondary-fixed hover:text-white transition-colors tracking-widest uppercase"
-                href="#"
-              >
-                Home
-              </a>
-              <span className="material-symbols-outlined text-secondary-fixed text-sm">
-                chevron_right
-              </span>
-              <span className="font-label-sm text-label-sm text-secondary-fixed font-bold tracking-widest uppercase">
-                Services
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-5 flex items-center gap-2 font-label-sm text-label-sm tracking-widest text-[#EAF3EA]/70 uppercase"
+            >
+              <Link className="hover:text-white transition-colors" href="/">
+                HOME
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-secondary-fixed" />
+              <span className="text-secondary-fixed font-semibold">
+                OUR SERVICES &amp; SOLUTIONS
               </span>
             </nav>
             <div className="max-w-3xl">
@@ -69,71 +71,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
-        {/* Sticky Mobile Subnav Anchor Bar */}
-        <div className="lg:hidden sticky top-20 z-40 bg-surface-container-lowest/95 backdrop-blur-md border-b border-surface-container-highest px-4 py-3 overflow-x-auto no-scrollbar shadow-sm">
-          <div className="flex items-center gap-2 whitespace-nowrap">
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-semibold"
-              href="#laboratory-capacity"
-            >
-              01. Capacity
-            </a>
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
-              href="#equipment-support"
-            >
-              02. Equipment
-            </a>
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
-              href="#quality-management"
-            >
-              03. Quality
-            </a>
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
-              href="#diagnostic-services"
-            >
-              04. Diagnostics
-            </a>
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
-              href="#biosafety-biosecurity"
-            >
-              05. Biosafety
-            </a>
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
-              href="#biorepository-development"
-            >
-              06. Biorepository
-            </a>
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
-              href="#clinical-trial-support"
-            >
-              07. Clinical Trials
-            </a>
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
-              href="#regulatory-ethics"
-            >
-              08. Regulatory
-            </a>
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
-              href="#amr-surveillance"
-            >
-              09. AMR
-            </a>
-            <a
-              className="font-label-sm text-label-sm px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors"
-              href="#outbreak-investigation"
-            >
-              10. Outbreak
-            </a>
-          </div>
-        </div>
         {/* Main Body Content: Side Index + Detailed Alternating Solution Blocks */}
         <section className="w-full bg-surface">
           <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24">
@@ -164,9 +101,10 @@ export default function ServicesPage() {
                             Laboratory Capacity
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                       <a
                         className="group flex items-center justify-between py-2 px-3 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-medium"
@@ -178,9 +116,10 @@ export default function ServicesPage() {
                             Equipment &amp; Tech Transfer
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                       <a
                         className="group flex items-center justify-between py-2 px-3 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-medium"
@@ -192,9 +131,10 @@ export default function ServicesPage() {
                             Quality Management Systems
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                       <a
                         className="group flex items-center justify-between py-2 px-3 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-medium"
@@ -203,12 +143,13 @@ export default function ServicesPage() {
                         <span className="flex items-center gap-2.5">
                           <span className="text-secondary font-bold font-mono text-xs">04</span>
                           <span className="group-hover:text-secondary transition-colors">
-                            Assay Scale-Up
+                            Diagnostic Services
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                       <a
                         className="group flex items-center justify-between py-2 px-3 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-medium"
@@ -220,9 +161,10 @@ export default function ServicesPage() {
                             Biosafety &amp; Biosecurity
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                       <a
                         className="group flex items-center justify-between py-2 px-3 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-medium"
@@ -234,9 +176,10 @@ export default function ServicesPage() {
                             Biorepository Development
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                       <a
                         className="group flex items-center justify-between py-2 px-3 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-medium"
@@ -248,9 +191,10 @@ export default function ServicesPage() {
                             Clinical Trial Support
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                       <a
                         className="group flex items-center justify-between py-2 px-3 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-medium"
@@ -262,9 +206,10 @@ export default function ServicesPage() {
                             Regulatory &amp; Ethics
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                       <a
                         className="group flex items-center justify-between py-2 px-3 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-medium"
@@ -276,9 +221,10 @@ export default function ServicesPage() {
                             AMR Surveillance
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                       <a
                         className="group flex items-center justify-between py-2 px-3 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-medium"
@@ -290,18 +236,17 @@ export default function ServicesPage() {
                             Outbreak Response
                           </span>
                         </span>
-                        <span className="material-symbols-outlined text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity">
-                          arrow_forward
-                        </span>
+                        <Icon
+                          name="arrow_forward"
+                          className=" text-[16px] text-outline opacity-0 group-hover:opacity-100 transition-opacity"
+                        />
                       </a>
                     </nav>
                   </div>
                   {/* Quick Contact / Technical Support CTA Widget */}
                   <div className="bg-linear-to-br from-primary to-primary-container text-on-primary rounded-xl p-6 shadow-md">
                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4">
-                      <span className="material-symbols-outlined text-secondary-fixed text-2xl">
-                        support_agent
-                      </span>
+                      <Icon name="support_agent" className=" text-secondary-fixed text-2xl" />
                     </div>
                     <h4 className="font-title-lg text-title-lg text-white mb-2">
                       Need custom technical support?
@@ -341,7 +286,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <span className="material-symbols-outlined">school</span>
+                      <Icon name="school" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -349,57 +294,64 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Continuous professional development programmes
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Skills enhancement for laboratory professionals
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Virtual and hybrid learning platforms
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Training-of-trainers initiatives
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Laboratory mentorship and coaching
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Fellowship attachment programmes
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60 md:col-span-2">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Leadership and management training
                       </span>
@@ -426,7 +378,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <span className="material-symbols-outlined">precision_manufacturing</span>
+                      <Icon name="precision_manufacturing" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -434,65 +386,73 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container-high">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Laboratory equipment needs assessments
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Equipment sourcing and donations
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Technology transfer support
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Strategic vendor partnerships
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Equipment calibration and validation
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Preventive maintenance training
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Affordable diagnostic technologies
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Laboratory infrastructure strengthening
                       </span>
@@ -519,7 +479,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <span className="material-symbols-outlined">verified</span>
+                      <Icon name="verified" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -527,49 +487,55 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         ISO 15189 training and implementation support
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Accreditation readiness programmes
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         SOPs and quality manual development
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Internal quality audits
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Gap assessments
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         External Quality Assessment participation
                       </span>
@@ -596,7 +562,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <span className="material-symbols-outlined">biotech</span>
+                      <Icon name="biotech" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -604,57 +570,64 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container-high">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Introduction of validated assays and assay validation
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Expansion of laboratory test menus
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         National diagnostic inventories
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Supply chain strengthening
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Priority disease testing support
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Assay validation
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest md:col-span-2">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Improved diagnostic access
                       </span>
@@ -681,7 +654,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <span className="material-symbols-outlined">shield</span>
+                      <Icon name="shield" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -689,33 +662,37 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Biosafety and biosecurity training
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Laboratory risk assessments and hazard mitigation planning
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Waste management systems
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Emergency response planning
                       </span>
@@ -742,7 +719,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <span className="material-symbols-outlined">inventory_2</span>
+                      <Icon name="inventory_2" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -750,25 +727,28 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container-high">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Biorepository establishment
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Biospecimen management training
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest md:col-span-2">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Ethical governance and regulatory compliance guidance
                       </span>
@@ -795,7 +775,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <span className="material-symbols-outlined">science</span>
+                      <Icon name="science" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -803,33 +783,37 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Good Clinical Laboratory Practice training and implementation
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Laboratory monitoring support
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Sponsor and CRO audit preparation
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Clinical research laboratory strengthening
                       </span>
@@ -856,7 +840,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <span className="material-symbols-outlined">policy</span>
+                      <Icon name="policy" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -864,33 +848,37 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container-high">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Ethics submission support
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Regulatory application guidance
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Compliance monitoring
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         CRO technical assistance
                       </span>
@@ -917,7 +905,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <span className="material-symbols-outlined">coronavirus</span>
+                      <Icon name="coronavirus" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -925,49 +913,55 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Sentinel AMR laboratory development
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         AMR diagnostic strengthening
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Microbiology workforce training
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         National antibiogram databases
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Surveillance data management
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low/60">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Antimicrobial stewardship support
                       </span>
@@ -994,7 +988,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <span className="material-symbols-outlined">emergency</span>
+                      <Icon name="emergency" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -1002,49 +996,55 @@ export default function ServicesPage() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-surface-container-high">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Rapid response team training
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Mobile laboratory support
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Emergency diagnostic surge capacity
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Real-time laboratory reporting
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Outbreak investigation support
                       </span>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest">
-                      <span className="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <Icon
+                        name="check_circle"
+                        className=" text-secondary text-xl shrink-0 mt-0.5"
+                      />
                       <span className="font-body-sm text-body-sm text-on-surface font-medium">
                         Epidemic preparedness planning
                       </span>

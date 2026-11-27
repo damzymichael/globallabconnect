@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @config "../../../tailwind.config.cjs";
 
 @layer base {
@@ -9,6 +9,7 @@
   }
   body {
     overscroll-behavior: none;
+    scroll-behavior: smooth;
   }
   main > :first-child {
     margin-top: 0 !important;

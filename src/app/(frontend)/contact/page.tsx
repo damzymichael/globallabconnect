@@ -1,4 +1,7 @@
 import React from 'react'
+import Link from 'next/link'
+import { ChevronRight } from 'lucide-react'
+import Icon from '../../../components/Icon'
 
 export default function ContactPage() {
   return (
@@ -20,12 +23,15 @@ export default function ContactPage() {
           <div className="absolute inset-0 z-0 bg-linear-to-r from-inverse-surface via-inverse-surface/95 to-inverse-surface/85"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-margin">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-widest text-surface-container-high/70 mb-6">
-              <a className="hover:text-surface-bright transition-colors" href="/">
-                Home
-              </a>
-              <span className="text-surface-container-high/40">›</span>
-              <span className="text-surface-bright font-semibold">Contact Us</span>
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-5 flex items-center gap-2 font-label-sm text-label-sm tracking-widest text-[#EAF3EA]/70 uppercase"
+            >
+              <Link className="hover:text-white transition-colors" href="/">
+                HOME
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-secondary-fixed" />
+              <span className="text-secondary-fixed font-semibold">CONTACT US</span>
             </nav>
             {/* Headline & Subtitle */}
             <div className="max-w-3xl space-y-4">
@@ -41,21 +47,15 @@ export default function ContactPage() {
             {/* Assurance Pills */}
             <div className="flex flex-wrap items-center gap-3 pt-8">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-bright font-label-sm text-label-sm">
-                <span className="material-symbols-outlined text-secondary-fixed text-base">
-                  schedule
-                </span>
+                <Icon name="schedule" className=" text-secondary-fixed text-base" />
                 Direct Response within 24 Hours
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-bright font-label-sm text-label-sm">
-                <span className="material-symbols-outlined text-secondary-fixed text-base">
-                  domain
-                </span>
+                <Icon name="domain" className=" text-secondary-fixed text-base" />
                 Global Headquarters &amp; Regional Hubs
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-bright font-label-sm text-label-sm">
-                <span className="material-symbols-outlined text-secondary-fixed text-base">
-                  verified
-                </span>
+                <Icon name="verified" className=" text-secondary-fixed text-base" />
                 RC: 9435175
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                 <div className="bg-surface-container-low rounded-xl p-6 shadow-sm">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                      <span className="material-symbols-outlined text-2xl">call</span>
+                      <Icon name="call" className=" text-2xl" />
                     </div>
                     <div>
                       <h3 className="font-title-md text-title-md text-on-surface">
@@ -104,18 +104,14 @@ export default function ContactPage() {
                       className="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
                       href="tel:+2348032424965"
                     >
-                      <span className="material-symbols-outlined text-secondary text-xl">
-                        phone_iphone
-                      </span>
+                      <Icon name="phone_iphone" className=" text-secondary text-xl" />
                       <span>+234-803-242-4965</span>
                     </a>
                     <a
                       className="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
                       href="tel:+2349129054546"
                     >
-                      <span className="material-symbols-outlined text-secondary text-xl">
-                        phone_iphone
-                      </span>
+                      <Icon name="phone_iphone" className=" text-secondary text-xl" />
                       <span>+234-912-905-4546</span>
                     </a>
                   </div>
@@ -128,7 +124,7 @@ export default function ContactPage() {
                 <div className="bg-surface-container-low rounded-xl p-6 shadow-sm">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
-                      <span className="material-symbols-outlined text-2xl">mail</span>
+                      <Icon name="mail" className=" text-2xl" />
                     </div>
                     <div>
                       <h3 className="font-title-md text-title-md text-on-surface">
@@ -144,18 +140,14 @@ export default function ContactPage() {
                       className="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
                       href="mailto:info@eclaboratory.com"
                     >
-                      <span className="material-symbols-outlined text-outline text-xl">
-                        alternate_email
-                      </span>
+                      <Icon name="alternate_email" className=" text-outline text-xl" />
                       <span>info@eclaboratory.com</span>
                     </a>
                     <a
                       className="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
                       href="mailto:contact@globallabconnect.org"
                     >
-                      <span className="material-symbols-outlined text-outline text-xl">
-                        mark_email_read
-                      </span>
+                      <Icon name="mark_email_read" className=" text-outline text-xl" />
                       <span>contact@globallabconnect.org</span>
                     </a>
                   </div>
@@ -164,7 +156,7 @@ export default function ContactPage() {
                 <div className="bg-surface-container-low rounded-xl p-6 shadow-sm">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                      <span className="material-symbols-outlined text-2xl">verified_user</span>
+                      <Icon name="verified_user" className=" text-2xl" />
                     </div>
                     <div>
                       <h3 className="font-title-md text-title-md text-on-surface">
@@ -177,7 +169,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-2 text-on-surface pl-1">
                     <div className="flex items-center gap-3 text-on-surface-variant pt-2">
-                      <span className="material-symbols-outlined text-outline text-xl">badge</span>
+                      <Icon name="badge" className=" text-outline text-xl" />
                       <span className="font-label-md text-label-md font-semibold text-on-surface">
                         Registration Number: RC 9435175
                       </span>
@@ -188,7 +180,7 @@ export default function ContactPage() {
                 <div className="bg-surface-container-low rounded-xl p-6 shadow-sm">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
-                      <span className="material-symbols-outlined text-2xl">location_city</span>
+                      <Icon name="location_city" className=" text-2xl" />
                     </div>
                     <div>
                       <h3 className="font-title-md text-title-md text-on-surface">
@@ -201,9 +193,7 @@ export default function ContactPage() {
                   </div>
                   <ul className="space-y-3 font-body-sm text-body-sm text-on-surface pl-1">
                     <li className="flex items-start gap-3">
-                      <span className="material-symbols-outlined text-secondary text-lg mt-0.5">
-                        place
-                      </span>
+                      <Icon name="place" className=" text-secondary text-lg mt-0.5" />
                       <div>
                         <strong className="font-semibold text-on-surface">
                           Head Office &amp; Central Hub:
@@ -341,7 +331,7 @@ export default function ContactPage() {
                       type="submit"
                     >
                       <span>Submit Inquiry</span>
-                      <span className="material-symbols-outlined text-xl">arrow_forward</span>
+                      <Icon name="arrow_forward" className=" text-xl" />
                     </button>
                   </div>
                 </form>
@@ -350,7 +340,7 @@ export default function ContactPage() {
                   className="hidden mt-6 p-4 rounded-xl bg-secondary-container text-on-secondary-fixed items-center gap-3"
                   id="formSuccess"
                 >
-                  <span className="material-symbols-outlined text-secondary">check_circle</span>
+                  <Icon name="check_circle" className=" text-secondary" />
                   <span className="font-body-sm text-body-sm font-semibold">
                     Thank you for reaching out. Your inquiry has been routed to our regional
                     advisory team and we will respond within 24 hours.

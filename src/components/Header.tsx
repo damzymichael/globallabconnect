@@ -3,11 +3,27 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import {
+  ChevronDown,
+  Menu,
+  X,
+  Users,
+  Cpu,
+  BadgeCheck,
+  Dna,
+  Shield,
+  Archive,
+  FlaskConical,
+  Gavel,
+  Virus,
+  AlertCircle,
+} from 'lucide-react'
 
 export default function Header() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false)
 
   const isActive = (path: string) => {
     if (path === '/' && pathname === '/') return true
@@ -19,14 +35,14 @@ export default function Header() {
     if (isActive(path)) {
       return 'font-label-lg text-label-lg transition-colors text-primary-container font-semibold border-b-2 border-primary-container pb-0.5'
     }
-    return 'font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent'
+    return 'font-label-lg text-label-lg text-on-surface-variant hover:text-primary-container hover:border-primary-container/40 transition-colors pb-0.5 border-b-2 border-transparent'
   }
 
   const getMobileNavLinkClass = (path: string) => {
     if (isActive(path)) {
       return 'font-label-lg text-label-lg text-primary-container font-bold py-2 transition-colors'
     }
-    return 'font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors'
+    return 'font-label-lg text-label-lg text-on-surface-variant hover:text-primary-container py-2 transition-colors'
   }
 
   return (
@@ -54,27 +70,33 @@ export default function Header() {
           >
             About
           </Link>
-          <div className="relative py-2 group" id="services-dropdown-container">
+          <div
+            className="relative py-4 group"
+            id="services-dropdown-container"
+            onMouseEnter={() => setServicesDropdownOpen(true)}
+            onMouseLeave={() => setServicesDropdownOpen(false)}
+          >
             <Link
               id="services-menu-link"
               className={
                 isActive('/services')
                   ? 'font-label-lg text-label-lg transition-colors text-primary-container font-semibold border-b-2 border-primary-container pb-0.5 flex items-center gap-1 cursor-pointer focus:outline-none'
-                  : 'font-label-lg text-label-lg text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-1 cursor-pointer focus:outline-none pb-0.5 border-b-2 border-transparent'
+                  : 'font-label-lg text-label-lg text-on-surface-variant hover:text-primary-container hover:border-primary-container/40 transition-colors flex items-center gap-1 cursor-pointer focus:outline-none pb-0.5 border-b-2 border-transparent'
               }
               href="/services"
             >
               <span>Services</span>
-              <span
-                id="services-chevron"
-                className="material-symbols-outlined text-[18px] transition-transform duration-200 text-outline group-hover:rotate-180"
-              >
-                expand_more
-              </span>
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 text-outline group-hover:rotate-180 ${
+                  servicesDropdownOpen ? 'rotate-180 text-primary-container' : ''
+                }`}
+              />
             </Link>
             <div
               id="services-dropdown-menu"
-              className="absolute left-1/2 -translate-x-1/2 top-full pt-2 hidden group-hover:block z-50 w-150"
+              className={`absolute left-1/2 -translate-x-1/2 top-full pt-2 z-50 w-150 transition-all duration-200 ${
+                servicesDropdownOpen ? 'block opacity-100 visible' : 'hidden group-hover:block'
+              }`}
             >
               <div className="bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/40 p-4 grid grid-cols-2 gap-2 text-left">
                 <Link
@@ -82,7 +104,7 @@ export default function Header() {
                   href="/services#laboratory-capacity"
                 >
                   <div className="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">groups</span>
+                    <Users className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">
@@ -98,9 +120,7 @@ export default function Header() {
                   href="/services#equipment-support"
                 >
                   <div className="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">
-                      precision_manufacturing
-                    </span>
+                    <Cpu className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">
@@ -116,7 +136,7 @@ export default function Header() {
                   href="/services#quality-management"
                 >
                   <div className="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">verified</span>
+                    <BadgeCheck className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">
@@ -132,7 +152,7 @@ export default function Header() {
                   href="/services#diagnostic-services"
                 >
                   <div className="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">biotech</span>
+                    <Dna className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">
@@ -148,7 +168,7 @@ export default function Header() {
                   href="/services#biosafety-biosecurity"
                 >
                   <div className="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">shield</span>
+                    <Shield className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">
@@ -164,7 +184,7 @@ export default function Header() {
                   href="/services#biorepository-development"
                 >
                   <div className="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">inventory_2</span>
+                    <Archive className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">
@@ -180,7 +200,7 @@ export default function Header() {
                   href="/services#clinical-trial-support"
                 >
                   <div className="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">science</span>
+                    <FlaskConical className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">
@@ -196,7 +216,7 @@ export default function Header() {
                   href="/services#regulatory-ethics"
                 >
                   <div className="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">gavel</span>
+                    <Gavel className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">
@@ -212,7 +232,7 @@ export default function Header() {
                   href="/services#amr-surveillance"
                 >
                   <div className="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">coronavirus</span>
+                    <Virus className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">
@@ -228,7 +248,7 @@ export default function Header() {
                   href="/services#outbreak-investigation"
                 >
                   <div className="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                    <span className="material-symbols-outlined text-[18px]">emergency</span>
+                    <AlertCircle className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">
@@ -243,20 +263,6 @@ export default function Header() {
             </div>
           </div>
           <Link
-            aria-current={isActive('/projects') ? 'page' : undefined}
-            className={getDesktopNavLinkClass('/projects')}
-            href="/projects"
-          >
-            Projects
-          </Link>
-          <Link
-            aria-current={isActive('/blogs') ? 'page' : undefined}
-            className={getDesktopNavLinkClass('/blogs')}
-            href="/blogs"
-          >
-            Blog
-          </Link>
-          <Link
             aria-current={isActive('/contact') ? 'page' : undefined}
             className={getDesktopNavLinkClass('/contact')}
             href="/contact"
@@ -266,21 +272,19 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-3 md:gap-space-lg shrink-0">
           <Link
-            className="hidden sm:inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary hover:text-on-primary font-label-lg text-label-lg px-6 lg:px-7 py-2.5 lg:py-3 transition-colors whitespace-nowrap shadow-sm"
+            className="hidden sm:inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary hover:text-on-primary font-label-lg text-label-lg px-6 lg:px-7 py-2.5 lg:py-3 transition-colors whitespace-nowrap shadow-sm font-semibold"
             href="/contact"
           >
             Partner With Us
           </Link>
           <button
             id="mobile-menu-btn"
-            className="lg:hidden p-2 text-on-surface hover:text-primary-container focus:outline-none flex items-center justify-center"
+            className="lg:hidden p-2 text-on-surface hover:text-primary-container focus:outline-none flex items-center justify-center cursor-pointer"
             aria-label="Toggle menu"
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <span id="mobile-menu-icon" className="material-symbols-outlined text-[28px]">
-              {mobileMenuOpen ? 'close' : 'menu'}
-            </span>
+            {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
       </div>
@@ -307,19 +311,16 @@ export default function Header() {
             <div className="border-y border-outline-variant/20 py-1">
               <button
                 id="mobile-services-btn"
-                className="w-full flex items-center justify-between py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer focus:outline-none"
+                className="w-full flex items-center justify-between py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer focus:outline-none"
                 type="button"
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
               >
                 <span>Services</span>
-                <span
-                  id="mobile-services-chevron"
-                  className={`material-symbols-outlined text-[20px] transition-transform duration-200 ${
-                    mobileServicesOpen ? 'rotate-180' : ''
+                <ChevronDown
+                  className={`w-5 h-5 transition-transform duration-200 ${
+                    mobileServicesOpen ? 'rotate-180 text-primary-container' : ''
                   }`}
-                >
-                  expand_more
-                </span>
+                />
               </button>
               {mobileServicesOpen && (
                 <div
@@ -331,9 +332,7 @@ export default function Header() {
                     href="/services#laboratory-capacity"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-primary-container">
-                      groups
-                    </span>
+                    <Users className="w-4 h-4 text-primary-container" />
                     <span>Laboratory Capacity</span>
                   </Link>
                   <Link
@@ -341,9 +340,7 @@ export default function Header() {
                     href="/services#equipment-support"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-secondary">
-                      precision_manufacturing
-                    </span>
+                    <Cpu className="w-4 h-4 text-secondary" />
                     <span>Equipment Support</span>
                   </Link>
                   <Link
@@ -351,9 +348,7 @@ export default function Header() {
                     href="/services#quality-management"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-primary-container">
-                      verified
-                    </span>
+                    <BadgeCheck className="w-4 h-4 text-primary-container" />
                     <span>Quality Management</span>
                   </Link>
                   <Link
@@ -361,9 +356,7 @@ export default function Header() {
                     href="/services#diagnostic-services"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-secondary">
-                      biotech
-                    </span>
+                    <Dna className="w-4 h-4 text-secondary" />
                     <span>Assay Scale-Up</span>
                   </Link>
                   <Link
@@ -371,9 +364,7 @@ export default function Header() {
                     href="/services#biosafety-biosecurity"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-primary-container">
-                      shield
-                    </span>
+                    <Shield className="w-4 h-4 text-primary-container" />
                     <span>Biosafety &amp; Biosecurity</span>
                   </Link>
                   <Link
@@ -381,9 +372,7 @@ export default function Header() {
                     href="/services#biorepository-development"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-secondary">
-                      inventory_2
-                    </span>
+                    <Archive className="w-4 h-4 text-secondary" />
                     <span>Biorepository</span>
                   </Link>
                   <Link
@@ -391,9 +380,7 @@ export default function Header() {
                     href="/services#clinical-trial-support"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-primary-container">
-                      science
-                    </span>
+                    <FlaskConical className="w-4 h-4 text-primary-container" />
                     <span>Clinical Trial Support</span>
                   </Link>
                   <Link
@@ -401,9 +388,7 @@ export default function Header() {
                     href="/services#regulatory-ethics"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-secondary">
-                      gavel
-                    </span>
+                    <Gavel className="w-4 h-4 text-secondary" />
                     <span>Regulatory &amp; Ethics</span>
                   </Link>
                   <Link
@@ -411,9 +396,7 @@ export default function Header() {
                     href="/services#amr-surveillance"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-primary-container">
-                      coronavirus
-                    </span>
+                    <Virus className="w-4 h-4 text-primary-container" />
                     <span>AMR Surveillance</span>
                   </Link>
                   <Link
@@ -421,28 +404,12 @@ export default function Header() {
                     href="/services#outbreak-investigation"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <span className="material-symbols-outlined text-[18px] text-secondary">
-                      emergency
-                    </span>
+                    <AlertCircle className="w-4 h-4 text-secondary" />
                     <span>Outbreak Response</span>
                   </Link>
                 </div>
               )}
             </div>
-            <Link
-              className={getMobileNavLinkClass('/projects')}
-              href="/projects"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              className={getMobileNavLinkClass('/blogs')}
-              href="/blogs"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Blog
-            </Link>
             <Link
               className={getMobileNavLinkClass('/contact')}
               href="/contact"
@@ -452,7 +419,7 @@ export default function Header() {
             </Link>
             <div className="pt-2 sm:hidden">
               <Link
-                className="w-full inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg py-3 transition-colors shadow-sm"
+                className="w-full inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg py-3 transition-colors shadow-sm font-semibold"
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
               >

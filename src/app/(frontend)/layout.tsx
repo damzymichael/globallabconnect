@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import './styles.css'
 
 export const metadata: Metadata = {
