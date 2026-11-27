@@ -97,10 +97,7 @@ export default function AboutPage() {
                   <div
                     className="w-full h-full bg-cover bg-center"
                     data-alt="Focused team of biomedical laboratory scientists in sterile dark-navy uniforms using automated PCR and pipetting assays under soft focused laboratory task lamps in a modern clinical pathology facility"
-                    style={{
-                      backgroundImage:
-                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6hJAe4wAiNac34Kdkj7cvmXgKS3eo50AHxQF99vR53dBz7zHDvR5jiJtGzb1zlnQTl8h7jE3rSqQjFnJn64S_pR_52NMw7NeJAxnvQ4WU1zDtDP9HqMMvU6K5ufFby5KAv1w99yNhrfYK19NGsnS8aqlYfaSi5zyJ4ZyyVCZFgewcQx3bGaMsL3x_WcD1bKgK7-bOfcxwa69IDdf9UsygcNyZPe8fHjtDYd11uP0')",
-                    }}
+                    style={{ backgroundImage: "url('/lab_attendant.png')" }}
                   ></div>
                   <div className="absolute inset-0 bg-linear-to-t from-[#131B16]/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-md">

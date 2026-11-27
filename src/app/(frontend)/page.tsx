@@ -1,7 +1,36 @@
-import React from 'react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import Icon from '../../components/Icon'
+import Icon from '@/components/Icon'
+
+// Core pillars shown on the homepage. The full list of ten lives on the About page (#core-pillars).
+const homePillars = [
+  {
+    title: 'Training & Capacity Building',
+    description: 'Developing a skilled and competent laboratory workforce.',
+  },
+  {
+    title: 'Equipment Support & Technology Transfer',
+    description: 'Expanding access to modern, reliable and sustainable diagnostic technologies.',
+  },
+  {
+    title: 'Quality Management Systems',
+    description: 'Ensuring quality excellence through international standards and accreditation.',
+  },
+  {
+    title: 'Diagnostic Services & Assay Scale-Up',
+    description: 'Improving access to accurate and timely diagnostic service.',
+  },
+]
+
+// Fields of clinical medicine covered by EC Laboratory
+const ecLabTests = [
+  'Medical Microbiology',
+  'Molecular Diagnostics',
+  'DNA Testing',
+  'Hematology',
+  'Chemistry',
+  'Immunology',
+]
 
 export default function HomePage() {
   return (
@@ -78,14 +107,14 @@ export default function HomePage() {
                   <img
                     className="w-full h-64 object-cover object-center"
                     data-alt="Clean natural-light photograph of a medical laboratory scientist working inside a biosafety cabinet with precision pipettes and diagnostic trays in a modern, well-lit clinical research facility, crisp white and soft sage tones, authentic documentary healthcare style"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCOxe1m-fc0xvnlMCf0iyQk6Ww4NobjDvuZwOUNCGi5zEvMZJER5PjpV6SIJwzTjg1J1Fudi5YrKtOyWOb58ba6eOQdYopnLQYOTNcpEKPkWgkM37r2rykvCIfaDru0Esp7acuRBNHJ04-H5KpPy44uPf_cOqPLM8YaFnE_-4JDBtSofPtaO0CN_OWdvek-9S_yeyKvtu6CXGiRHAjSw3_zfTnG_ygSxxoKmtpo_s"
+                    src="/laboratory_activity_one.jpeg"
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-md bg-surface-container-low">
                   <img
                     className="w-full h-64 object-cover object-center"
                     data-alt="Natural-light photograph of two laboratory professionals collaborating over digital diagnostic data and microscope slides at a modern laboratory bench, wearing lab coats and protective gloves, bright clinical environment with subtle green and neutral accents"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl5TTNgXCgT7CaXKqZJIlRtLZmMLw0IXCBvYzc1DCBKIHre5eAp7CrGpNsqtfvKZeZHlFk65DHrGnPWCw50EVUywh_MJ6dKeJ5QoehOc3nJvt-KQeh7tdOX5UwFVi9EvmASMh81tugfkPFr_jnfYSp1Vrsp9exMLV01l3Gkr_3pvkETN5kAtKcUyWb9YiW8BtI4h_pXfML0eWsFGh8oJISvg0sZVp-WCzeuNsBtQc"
+                    src="/laboratory_activity_two.jpeg"
                   />
                 </div>
               </div>
@@ -242,7 +271,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        {/* Section 5: Core Pillars of Global LabConnect (10 Numbered Pillars) */}
+        {/* Section 5: Core Pillars of Global LabConnect (featured pillars; full list on About page) */}
         <section className="w-full bg-surface-container-lowest text-on-surface py-20 lg:py-28">
           <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16">
             <div className="max-w-3xl">
@@ -255,150 +284,104 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-              {/* Pillar 1 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  01
+              {homePillars.map((pillar, index) => (
+                <div
+                  key={pillar.title}
+                  className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5"
+                >
+                  <div
+                    className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold text-title-lg ${
+                      index % 2 === 0
+                        ? 'bg-primary-fixed/50 text-primary-container'
+                        : 'bg-secondary-container/50 text-secondary'
+                    }`}
+                  >
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
+                  <div>
+                    <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
+                      {pillar.title}
+                    </h3>
+                    <p className="font-body-md text-body-md text-on-surface-variant">
+                      {pillar.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Training &amp; Capacity Building
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Developing a skilled and competent laboratory workforce.
-                  </p>
+              ))}
+            </div>
+            <div className="text-center pt-2">
+              <Link
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-8 py-3.5 transition-all shadow-md hover:shadow-lg"
+                href="/about#core-pillars"
+              >
+                <span>View All 10 Core Pillars</span>
+                <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Section 6: EC Laboratory */}
+        <section
+          className="w-full bg-surface-container-low text-on-surface py-20 lg:py-28"
+          id="ec-laboratory"
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              <div className="lg:col-span-7 flex flex-col gap-6">
+                <h2 className="font-headline-lg text-headline-lg text-on-surface">
+                  EC Laboratory: Our Clinical Diagnostic Laboratory
+                </h2>
+                <p className="font-body-lg text-body-lg text-on-surface-variant">
+                  As part of our diagnostic services, GLC operates EC Laboratory, a
+                  multidisciplinary clinical laboratory that provides diagnostic tests across
+                  different fields of clinical medicine.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {ecLabTests.map((test) => (
+                    <span
+                      key={test}
+                      className="inline-flex items-center rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface font-label-lg text-label-lg px-5 py-2.5"
+                    >
+                      {test}
+                    </span>
+                  ))}
                 </div>
-              </div>
-              {/* Pillar 2 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  02
-                </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Equipment Support &amp; Technology Transfer
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Expanding access to modern, reliable and sustainable diagnostic technologies.
-                  </p>
-                </div>
-              </div>
-              {/* Pillar 3 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  03
-                </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Quality Management Systems
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Ensuring quality excellence through international standards and accreditation.
-                  </p>
-                </div>
-              </div>
-              {/* Pillar 4 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  04
-                </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Diagnostic Services &amp; Assay Scale-Up
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Improving access to accurate and timely diagnostic service.
-                  </p>
-                </div>
-              </div>
-              {/* Pillar 5 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  05
-                </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Biosafety &amp; Biosecurity
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Promoting safe laboratory practices and protecting people and communities.
-                  </p>
-                </div>
-              </div>
-              {/* Pillar 6 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  06
-                </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Biorepository Development
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Strengthening research through high-quality biospecimen management.
-                  </p>
+                <div className="pt-2">
+                  <a
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-8 py-3.5 transition-all shadow-md hover:shadow-lg"
+                    target="_blank"
+                    href="https://eclaboratory.com"
+                  >
+                    <span>Explore EC Laboratory</span>
+                    <ArrowRight size={18} />
+                  </a>
                 </div>
               </div>
-              {/* Pillar 7 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  07
-                </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Clinical Trial Laboratory Support
+              <div className="lg:col-span-5">
+                <div className="bg-surface-container-lowest rounded-xl p-8 lg:p-10 shadow-sm flex flex-col gap-5">
+                  <div className="w-14 h-14 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0">
+                    <Icon name="biotech" className=" text-[28px]" />
+                  </div>
+                  <h3 className="font-headline-sm text-headline-sm text-on-surface">
+                    Need a diagnostic test?
                   </h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">
-                    Supporting high-quality laboratories for world-class clinical research.
+                    Talk to the EC Laboratory team about the tests you need, sample requirements and
+                    turnaround times.
                   </p>
-                </div>
-              </div>
-              {/* Pillar 8 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  08
-                </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Regulatory &amp; Ethics Support
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Facilitating compliance with ethical, regulatory and policy requirements.
-                  </p>
-                </div>
-              </div>
-              {/* Pillar 9 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-primary-fixed/50 text-primary-container flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  09
-                </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Antimicrobial Resistance Surveillance
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Combating antimicrobial resistance through surveillance, data and collaboration.
-                  </p>
-                </div>
-              </div>
-              {/* Pillar 10 */}
-              <div className="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm hover:shadow-md transition-all flex items-start gap-5">
-                <div className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0 font-bold text-title-lg">
-                  10
-                </div>
-                <div>
-                  <h3 className="font-title-md text-title-md text-on-surface font-semibold mb-1">
-                    Outbreak Investigation &amp; Emergency Response
-                  </h3>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    Enhancing preparedness and response to public health emergencies.
-                  </p>
+                  <Link
+                    className="inline-flex items-center gap-2 text-primary-container hover:text-primary font-label-lg text-label-lg font-semibold transition-colors"
+                    href="/contact"
+                  >
+                    <span>Contact EC Laboratory</span>
+                    <ArrowRight size={16} />
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        {/* Section 6: Pre-Footer CTA Band: Partner With Us */}
+        {/* Section 7: Pre-Footer CTA Band: Partner With Us */}
         <section
           className="relative w-full py-20 lg:py-28 bg-inverse-surface overflow-hidden"
           id="partner-with-us"
