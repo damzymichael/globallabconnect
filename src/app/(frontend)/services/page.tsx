@@ -15,7 +15,7 @@ export default function ServicesPage() {
                 "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8E47aTZAj3MD1Kk3jagGXaJAkB500chQUh5NmwT-Dt-ShGZm9sxr3CEj5bwIJEAUJDOBgEoHQla18k5uF5AK-JNLq3ZDqMCZnG8VKveRn0g5d3Hx5dC8S39QNElEHDzQLuBb1hwb3OisVVnnbR-OJE209o1b5ogxQ9iVJOrbZamCYzSaRunAAKelRslAcVDpbDuCsNemelqXgH6riQ__I8Hq7QGm_UmRoyMVOLoA')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-inverse-surface via-inverse-surface/90 to-inverse-surface/80"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-inverse-surface via-inverse-surface/90 to-inverse-surface/80"></div>
           <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 mb-6">
@@ -297,7 +297,7 @@ export default function ServicesPage() {
                     </nav>
                   </div>
                   {/* Quick Contact / Technical Support CTA Widget */}
-                  <div className="bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl p-6 shadow-md">
+                  <div className="bg-linear-to-br from-primary to-primary-container text-on-primary rounded-xl p-6 shadow-md">
                     <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4">
                       <span className="material-symbols-outlined text-secondary-fixed text-2xl">
                         support_agent
@@ -1069,7 +1069,7 @@ export default function ServicesPage() {
                 "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
           <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block">
               Collaborative Healthcare Innovation
@@ -1098,204 +1098,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
-        {/* Consistent Global Footer */}
-        <footer
-          className="w-full bg-[#0D1310] text-[#eaf3ea] border-t border-white/10 pt-16 pb-12"
-          id="contact"
-        >
-          <div className="max-w-7xl mx-auto px-6 lg:px-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-white/10">
-              {/* Col 1: Bio, Logo & RC */}
-              <div className="lg:col-span-2 space-y-4">
-                <a className="flex items-center shrink-0" href="/">
-                  <img
-                    alt="Global LabConnect"
-                    className="h-8 w-auto object-contain brightness-0 invert"
-                    src="https://lh3.googleusercontent.com/aida/ALJJyrC7khK5IRYWi2y3fvG8zDMo8n47kdy_Et1-MPECErgFLG2pGCKYk_-6Tlaci3yfp8G2e3CiCPG8DlR8vYZQmquV0_1ADHlkIr1dswjT3jocm0e7wsicVaDDfM560Ze7rcMJqfnxUwxslhFHXsiJfnPOuJuSgo6NmVKoVtIW8zn64rIQtJYxaCbKmVYmMU4OeLhejfIG58BHpYcI2-KDICqoxZKUDokzYwLwRIVDLTCcBbDxgD7UBW-dGPE"
-                  />
-                </a>
-                <p className="font-body-sm text-body-sm text-inverse-on-surface/70 leading-relaxed max-w-sm">
-                  Empowering healthcare systems, scientific laboratories, and diagnostics networks
-                  across the globe through quality frameworks, technical development, and capacity
-                  building.
-                </p>
-                <div className="space-y-1">
-                  <div className="font-label-sm text-label-sm text-secondary-fixed font-semibold tracking-wider">
-                    TAGLINE: “All Your Tests In One Place”
-                  </div>
-                  <div className="font-label-sm text-label-sm text-inverse-on-surface/50 font-mono">
-                    Registration RC 9435175
-                  </div>
-                </div>
-              </div>
-              {/* Col 2: Quick Links */}
-              <div className="space-y-4">
-                <div className="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">
-                  Quick Links
-                </div>
-                <ul className="space-y-2.5 font-body-sm text-body-sm text-inverse-on-surface/70">
-                  <li>
-                    <a className="hover:text-white transition-colors" href="/">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white transition-colors" href="/about">
-                      About GLC
-                    </a>
-                  </li>
-                  <li>
-                    <a className="text-secondary-fixed font-semibold" href="/services">
-                      Our Solutions
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white transition-colors" href="/projects">
-                      Projects &amp; Impact
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white transition-colors" href="/blogs">
-                      Blog &amp; Publications
-                    </a>
-                  </li>
-                  <li>
-                    <a className="hover:text-white transition-colors" href="/contact">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              {/* Col 3: Core Focus */}
-              <div className="space-y-4">
-                <div className="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">
-                  Core Focus
-                </div>
-                <ul className="space-y-2.5 font-body-sm text-body-sm text-inverse-on-surface/70">
-                  <li>
-                    <a
-                      className="hover:text-white transition-colors"
-                      href="/services#laboratory-capacity"
-                    >
-                      Workforce Training
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-white transition-colors"
-                      href="/services#quality-management"
-                    >
-                      ISO 15189 Standards
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-white transition-colors"
-                      href="/services#equipment-support"
-                    >
-                      Technology Transfer
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-white transition-colors"
-                      href="/services#clinical-trial-support"
-                    >
-                      Clinical Research Support
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-white transition-colors"
-                      href="/services#amr-surveillance"
-                    >
-                      AMR Surveillance
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-white transition-colors"
-                      href="/services#outbreak-investigation"
-                    >
-                      Outbreak Readiness
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              {/* Col 4: Contact Us */}
-              <div className="space-y-4 lg:col-span-1">
-                <div className="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">
-                  Contact Us
-                </div>
-                <div className="space-y-3 font-body-sm text-body-sm text-inverse-on-surface/80">
-                  <div className="flex items-center gap-2.5">
-                    <span className="material-symbols-outlined text-secondary-fixed text-lg">
-                      call
-                    </span>
-                    <div className="flex flex-col">
-                      <a className="hover:text-white transition-colors" href="tel:+2349129054546">
-                        +234-912-905-4546
-                      </a>
-                      <a className="hover:text-white transition-colors" href="tel:+2348032424965">
-                        +234-803-242-4965
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <span className="material-symbols-outlined text-secondary-fixed text-lg">
-                      mail
-                    </span>
-                    <div className="flex flex-col">
-                      <a
-                        className="hover:text-white transition-colors"
-                        href="mailto:info@eclaboratory.com"
-                      >
-                        info@eclaboratory.com
-                      </a>
-                      <a
-                        className="hover:text-white transition-colors"
-                        href="mailto:contact@globallabconnect.org"
-                      >
-                        contact@globallabconnect.org
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2.5">
-                    <span className="material-symbols-outlined text-secondary-fixed text-lg">
-                      language
-                    </span>
-                    <a
-                      className="hover:text-white transition-colors"
-                      href="https://www.eclaboratory.com"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      www.eclaboratory.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Legal Sub-Footer */}
-            <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-inverse-on-surface/50">
-              <div>
-                © 2026 Global LabConnect. All rights reserved. Registered under Nigerian CAC laws
-                (RC 9435175).
-              </div>
-              <div className="flex items-center gap-6">
-                <a className="hover:text-white transition-colors" href="#">
-                  Privacy Policy
-                </a>
-                <a className="hover:text-white transition-colors" href="#">
-                  Terms of Technical Engagement
-                </a>
-                <a className="hover:text-white transition-colors" href="#">
-                  Ethics &amp; Governance
-                </a>
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </main>
   )

@@ -36,7 +36,7 @@ export default function Header() {
           <img
             alt="Global LabConnect"
             className="h-8 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida/ALJJyrC7khK5IRYWi2y3fvG8zDMo8n47kdy_Et1-MPECErgFLG2pGCKYk_-6Tlaci3yfp8G2e3CiCPG8DlR8vYZQmquV0_1ADHlkIr1dswjT3jocm0e7wsicVaDDfM560Ze7rcMJqfnxUwxslhFHXsiJfnPOuJuSgo6NmVKoVtIW8zn64rIQtJYxaCbKmVYmMU4OeLhejfIG58BHpYcI2-KDICqoxZKUDokzYwLwRIVDLTCcBbDxgD7UBW-dGPE"
+            src="/glc_logo.png"
           />
         </Link>
         <nav className="hidden lg:flex items-center justify-center gap-space-lg mx-auto">
@@ -74,7 +74,7 @@ export default function Header() {
             </Link>
             <div
               id="services-dropdown-menu"
-              className="absolute left-1/2 -translate-x-1/2 top-full pt-2 hidden group-hover:block z-50 w-[600px]"
+              className="absolute left-1/2 -translate-x-1/2 top-full pt-2 hidden group-hover:block z-50 w-150"
             >
               <div className="bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/40 p-4 grid grid-cols-2 gap-2 text-left">
                 <Link

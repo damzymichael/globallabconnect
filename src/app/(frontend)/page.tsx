@@ -9,8 +9,8 @@ export default function HomePage() {
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-3/5 h-full">
           <img className="w-full h-full object-cover object-center opacity-75 lg:opacity-90" data-alt="Natural-light editorial photograph of a focused laboratory scientist in a crisp white lab coat and blue nitrile gloves examining diagnostic samples under a modern microscope in a bright, clean clinical laboratory, soft depth of field, cool neutral and subtle sage tones, high-clarity institutional healthcare photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRwGfHrtE2yx4EMGNOX17737H1vH3idqcE_ieX8mlbpfd5ZLfepMYrb2N4qPpU66YzM-S-R_qy8E4tdZsGGURzeh0D2KBn4MYvQQssDnN5XvxXru43dm6_R-u-0CLphn0QMOnP9wvAy2pa9j7BJvoG3V1UFEoYxYiiXfClAJp7S2I6l1rBRWxQvFiEZ5xDexqJpf0anngRK9Hl-R3teDbiYIa78SVomGNanOrNc9w" />
-          <div className="absolute inset-0 bg-gradient-to-r from-inverse-surface via-inverse-surface/80 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-inverse-surface/30 lg:hidden"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-inverse-surface via-inverse-surface/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-inverse-surface/60 via-transparent to-inverse-surface/30 lg:hidden"></div>
           </div>
         </div>
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-24 lg:py-36">
@@ -374,7 +374,7 @@ export default function HomePage() {
     <section className="relative w-full py-20 lg:py-28 bg-inverse-surface overflow-hidden" id="partner-with-us">
       {/* Atmospheric Laboratory Image with 85% Overlay */}
       <div className="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-15" data-alt="A modern bioanalytical laboratory at twilight with automated robotic analyzers, microplates, and scientists conducting diagnostic tests with glowing LED indicators in deep forest charcoal and clinical emerald green." style={{"backgroundImage":"url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc')"}}></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
+      <div className="absolute inset-0 bg-linear-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
       <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
         <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block">
               Collaborative Healthcare Innovation

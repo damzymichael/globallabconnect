@@ -27,7 +27,7 @@ export default function Footer() {
               <div className="font-label-sm text-label-sm text-secondary-fixed font-semibold tracking-wider">
                 TAGLINE: “All Your Tests In One Place”
               </div>
-              <div className="font-label-sm text-label-sm text-inverse-on-surface/50 font-mono">
+              <div className="font-label-sm text-label-sm text-inverse-on-surface/50">
                 Registration RC 9435175
               </div>
             </div>
@@ -138,11 +138,11 @@ export default function Footer() {
               <div className="flex items-center gap-2.5">
                 <span className="material-symbols-outlined text-secondary-fixed text-lg">call</span>
                 <div className="flex flex-col">
-                  <a className="hover:text-white transition-colors" href="tel:+2349129054546">
-                    +234-912-905-4546
-                  </a>
                   <a className="hover:text-white transition-colors" href="tel:+2348032424965">
                     +234-803-242-4965
+                  </a>
+                  <a className="hover:text-white transition-colors" href="tel:+2349129054546">
+                    +234-912-905-4546
                   </a>
                 </div>
               </div>

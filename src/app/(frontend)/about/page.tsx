@@ -7,7 +7,7 @@ export default function AboutPage() {
     {/* 1. Inner-Page Header (Compact Atmospheric Lab Banner) */}
     <section className="relative w-full bg-[#131B16] text-inverse-on-surface overflow-hidden -mt-20 pt-28 pb-16 lg:pb-24 shadow-md">
       <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-25 mix-blend-luminosity scale-105 transform motion-safe:transition-transform duration-1000" data-alt="Cinematic wide-angle interior of an advanced clinical microbiology laboratory at dusk, with cool blue LED illuminations, precision microscopes, automated assay analyzers, microplates, and biomedical scientists in protective gear working with micropipettes in sterile cleanroom conditions" style={{"backgroundImage":"url('https://lh3.googleusercontent.com/aida-public/AB6AXuCELEmUvyAY7HHq15Xlfmy-gy8A4sOknPsispXfZ2WlNneClWCaKUdM8WHIvg8dRv399qyWt4SSXX6gAElezaZnexkF4M6El_FOFfH0xBK4p2VjOlRA1dDS106zcMPdgqBO0aXFKACoBSpJ6ueCOMhX3jnoEQ-9-W4OIwUfwqgMFvCJmZ89KGfU_nHIIMZuKBGJiSYv6JCj_rd5ZHCWHYKTcEy3hreq6ijhnngdwIc')"}}></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#131B16] via-[#131B16]/90 to-[#131B16]/75"></div>
+      <div className="absolute inset-0 bg-linear-to-r from-[#131B16] via-[#131B16]/90 to-[#131B16]/75"></div>
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-start gap-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-container-high font-label-sm text-label-sm tracking-widest uppercase">
           <span>HOME</span>
@@ -67,9 +67,9 @@ export default function AboutPage() {
               </div>
             </div>
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/5] bg-surface-container-high">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-4/5 bg-surface-container-high">
               <div className="w-full h-full bg-cover bg-center" data-alt="Focused team of biomedical laboratory scientists in sterile dark-navy uniforms using automated PCR and pipetting assays under soft focused laboratory task lamps in a modern clinical pathology facility" style={{"backgroundImage":"url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6hJAe4wAiNac34Kdkj7cvmXgKS3eo50AHxQF99vR53dBz7zHDvR5jiJtGzb1zlnQTl8h7jE3rSqQjFnJn64S_pR_52NMw7NeJAxnvQ4WU1zDtDP9HqMMvU6K5ufFby5KAv1w99yNhrfYK19NGsnS8aqlYfaSi5zyJ4ZyyVCZFgewcQx3bGaMsL3x_WcD1bKgK7-bOfcxwa69IDdf9UsygcNyZPe8fHjtDYd11uP0')"}}></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#131B16]/80 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-[#131B16]/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-md">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
@@ -320,7 +320,7 @@ export default function AboutPage() {
           {/* Left Column: CEO Portrait & Credentials */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <div className="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md">
-              <div className="aspect-[3/4] relative bg-surface-variant overflow-hidden">
+              <div className="aspect-3/4 relative bg-surface-variant overflow-hidden">
                 <img className="w-full h-full object-cover object-top" data-alt="Formal executive portrait of Dr Ephraim Ogbaini-Emovon, an African physician and pathologist in professional business attire, brown jacket with collared shirt and tie, warm scholarly lighting, confident and authoritative demeanor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDosSueSO4in8fs7VlTYTkeg4ynBoKJyWg8bljMMbLOUCf5azCsITDA5vmxcj0UKh9Nw8N8w1f5XQIbtMN638hfDdzWhz3_JGpFd0X_rHp-VJAPOhqyEeHnyXZNtJcKHSwx99a-wpeOsfLhWWOkU7lHABvJjZxwmgFvJv-gDuzxXsYHmequf5M7RujLntDsqK4Uc7PKjUU2Is7DZYQUs20huLMmlE9Weeq0nhqTuQQ" />
                 </div>
               <div className="p-6 lg:p-8 space-y-3">
@@ -424,7 +424,7 @@ export default function AboutPage() {
     <section className="relative w-full py-20 lg:py-28 bg-inverse-surface overflow-hidden" id="partner-cta">
       {/* Atmospheric Laboratory Image with 85% Overlay */}
       <div className="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-15" data-alt="A modern bioanalytical laboratory at twilight with automated robotic analyzers, microplates, and scientists conducting diagnostic tests with glowing LED indicators in deep forest charcoal and clinical emerald green." style={{"backgroundImage":"url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc')"}}></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
+      <div className="absolute inset-0 bg-linear-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
       <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
         <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block">
               Collaborative Healthcare Innovation
@@ -444,64 +444,6 @@ export default function AboutPage() {
           <a className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all" href="/contact">
                 Speak to a Specialist
               </a>
-          </div>
-        </div>
-      </section>
-    {/* 7. Section 6: Standard Obsidian Footer Support Details (Integrated Body Strip) */}
-    <section className="w-full bg-[#0D1310] text-[#eaf3ea] pt-12 pb-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-[#2a322d]">
-          <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary-fixed text-[24px]">verified_user</span>
-              <span className="font-title-md text-title-md text-white">Accredited Network</span>
-              </div>
-            <p className="font-body-sm text-body-sm text-[#dce5dc]/80">
-                  Registered Entity RC 9435175. Delivering verified international diagnostics,
-                  training, and biobanking systems.
-                </p>
-            <span className="inline-block px-3 py-1 rounded bg-[#1A251E] text-secondary-fixed font-label-sm text-label-sm font-semibold">
-                  All Your Tests In One Place
-                </span>
-            </div>
-          <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary-fixed text-[24px]">call</span>
-              <span className="font-title-md text-title-md text-white">Telephone / WhatsApp</span>
-              </div>
-            <ul className="space-y-1 font-body-sm text-body-sm text-[#dce5dc]/80">
-              <li className="flex items-center gap-2">
-                <span className="text-secondary-fixed font-semibold">+234-912-905-4546</span>
-                </li>
-              <li className="flex items-center gap-2">
-                <span className="text-secondary-fixed font-semibold">+234-803-242-4965</span>
-                </li>
-              </ul>
-            </div>
-          <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary-fixed text-[24px]">mark_email_read</span>
-              <span className="font-title-md text-title-md text-white">Electronic Inquiries</span>
-              </div>
-            <ul className="space-y-1 font-body-sm text-body-sm text-[#dce5dc]/80">
-              <li>
-                <a className="hover:text-white transition-colors" href="mailto:info@eclaboratory.com">info@eclaboratory.com</a>
-                </li>
-              <li>
-                <a className="hover:text-white transition-colors" href="mailto:contact@globallabconnect.org">contact@globallabconnect.org</a>
-                </li>
-              </ul>
-            </div>
-          <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-secondary-fixed text-[24px]">location_on</span>
-              <span className="font-title-md text-title-md text-white">Headquarters &amp; Hub</span>
-              </div>
-            <p className="font-body-sm text-body-sm text-[#dce5dc]/80">
-                  Express Clinical Laboratory Complex &amp; National BSL-3 Bio-surveillance
-                  Facilities, Nigeria.
-                </p>
-            </div>
           </div>
         </div>
       </section>
