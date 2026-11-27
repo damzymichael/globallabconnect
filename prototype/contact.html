@@ -1,589 +1,1280 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#bcc3ff", "on-surface": "#151d18", "primary-container": "#8b0000", "inverse-primary": "#ffb4a8", "outline-variant": "#e3beb8", "on-tertiary": "#ffffff", "on-surface-variant": "#5a403c", "primary-fixed": "#ffdad4", "on-primary-container": "#ff907f", "surface-variant": "#dce5dc", "on-secondary-fixed": "#002204", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "secondary": "#006e1d", "secondary-container": "#86f886", "secondary-fixed": "#89fb89", "error": "#ba1a1a", "on-primary-fixed": "#410000", "on-tertiary-container": "#9ea9ff", "on-secondary-fixed-variant": "#005314", "on-secondary": "#ffffff", "surface-container-high": "#e2eae2", "secondary-fixed-dim": "#6dde70", "on-tertiary-fixed-variant": "#0d2ccc", "on-primary": "#ffffff", "inverse-on-surface": "#eaf3ea", "on-tertiary-fixed": "#000d60", "primary": "#610000", "primary-fixed-dim": "#ffb4a8", "surface-dim": "#d3dcd4", "on-primary-fixed-variant": "#920703", "surface-bright": "#f3fcf3", "tertiary-fixed": "#dfe0ff", "inverse-surface": "#2a322d", "surface-container-highest": "#dce5dc", "on-error-container": "#93000a", "tertiary-container": "#0025c8", "on-background": "#151d18", "surface": "#f3fcf3", "background": "#f3fcf3", "surface-container": "#e7f0e8", "outline": "#8e706b", "on-error": "#ffffff", "on-secondary-container": "#00731f", "tertiary": "#00178d", "surface-container-low": "#edf6ed", "surface-tint": "#b52619" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "margin": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "body-md": ["Manrope"], "headline-sm": ["Manrope"], "label-lg": ["Manrope"], "body-sm": ["Manrope"], "title-lg": ["Manrope"], "display-lg-mobile": ["Manrope"], "label-sm": ["Manrope"], "headline-md": ["Manrope"], "body-lg": ["Manrope"], "headline-lg-mobile": ["Manrope"], "display-lg": ["Manrope"], "headline-md-mobile": ["Manrope"], "title-md": ["Manrope"], "headline-lg": ["Manrope"] }, "fontSize": { "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant/40">
-  <div class="h-20 w-full px-6 md:px-10 lg:px-12 flex items-center justify-between gap-space-lg">
-    <a class="flex items-center shrink-0" href="index.html">
-      <img alt="Global LabConnect" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrC7khK5IRYWi2y3fvG8zDMo8n47kdy_Et1-MPECErgFLG2pGCKYk_-6Tlaci3yfp8G2e3CiCPG8DlR8vYZQmquV0_1ADHlkIr1dswjT3jocm0e7wsicVaDDfM560Ze7rcMJqfnxUwxslhFHXsiJfnPOuJuSgo6NmVKoVtIW8zn64rIQtJYxaCbKmVYmMU4OeLhejfIG58BHpYcI2-KDICqoxZKUDokzYwLwRIVDLTCcBbDxgD7UBW-dGPE"/>
-    </a>
-    <nav class="hidden lg:flex items-center justify-center gap-space-lg mx-auto">
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent" href="index.html">Home</a>
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent" href="about.html">About</a>
-      <div class="relative py-2 group" id="services-dropdown-container">
-        <a id="services-menu-link" class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-1 cursor-pointer focus:outline-none pb-0.5 border-b-2 border-transparent" href="services.html">
-          <span>Services</span>
-          <span id="services-chevron" class="material-symbols-outlined text-[18px] transition-transform duration-200 text-outline group-hover:rotate-180">expand_more</span>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'tertiary-fixed-dim': '#bcc3ff',
+              'on-surface': '#151d18',
+              'primary-container': '#8b0000',
+              'inverse-primary': '#ffb4a8',
+              'outline-variant': '#e3beb8',
+              'on-tertiary': '#ffffff',
+              'on-surface-variant': '#5a403c',
+              'primary-fixed': '#ffdad4',
+              'on-primary-container': '#ff907f',
+              'surface-variant': '#dce5dc',
+              'on-secondary-fixed': '#002204',
+              'error-container': '#ffdad6',
+              'surface-container-lowest': '#ffffff',
+              secondary: '#006e1d',
+              'secondary-container': '#86f886',
+              'secondary-fixed': '#89fb89',
+              error: '#ba1a1a',
+              'on-primary-fixed': '#410000',
+              'on-tertiary-container': '#9ea9ff',
+              'on-secondary-fixed-variant': '#005314',
+              'on-secondary': '#ffffff',
+              'surface-container-high': '#e2eae2',
+              'secondary-fixed-dim': '#6dde70',
+              'on-tertiary-fixed-variant': '#0d2ccc',
+              'on-primary': '#ffffff',
+              'inverse-on-surface': '#eaf3ea',
+              'on-tertiary-fixed': '#000d60',
+              primary: '#610000',
+              'primary-fixed-dim': '#ffb4a8',
+              'surface-dim': '#d3dcd4',
+              'on-primary-fixed-variant': '#920703',
+              'surface-bright': '#f3fcf3',
+              'tertiary-fixed': '#dfe0ff',
+              'inverse-surface': '#2a322d',
+              'surface-container-highest': '#dce5dc',
+              'on-error-container': '#93000a',
+              'tertiary-container': '#0025c8',
+              'on-background': '#151d18',
+              surface: '#f3fcf3',
+              background: '#f3fcf3',
+              'surface-container': '#e7f0e8',
+              outline: '#8e706b',
+              'on-error': '#ffffff',
+              'on-secondary-container': '#00731f',
+              tertiary: '#00178d',
+              'surface-container-low': '#edf6ed',
+              'surface-tint': '#b52619',
+            },
+            borderRadius: { DEFAULT: '0.25rem', lg: '0.5rem', xl: '0.75rem', full: '9999px' },
+            spacing: {
+              'space-xl': '2.5rem',
+              margin: '1.5rem',
+              'space-md': '1rem',
+              gutter: '1.5rem',
+              'space-lg': '1.5rem',
+              'space-xs': '0.25rem',
+              'space-sm': '0.5rem',
+            },
+            fontFamily: {
+              'body-md': ['Manrope'],
+              'headline-sm': ['Manrope'],
+              'label-lg': ['Manrope'],
+              'body-sm': ['Manrope'],
+              'title-lg': ['Manrope'],
+              'display-lg-mobile': ['Manrope'],
+              'label-sm': ['Manrope'],
+              'headline-md': ['Manrope'],
+              'body-lg': ['Manrope'],
+              'headline-lg-mobile': ['Manrope'],
+              'display-lg': ['Manrope'],
+              'headline-md-mobile': ['Manrope'],
+              'title-md': ['Manrope'],
+              'headline-lg': ['Manrope'],
+            },
+            fontSize: {
+              'body-md': ['16px', { lineHeight: '26px', fontWeight: '400' }],
+              'headline-sm': [
+                '24px',
+                { lineHeight: '32px', letterSpacing: '-0.005em', fontWeight: '600' },
+              ],
+              'label-lg': [
+                '14px',
+                { lineHeight: '20px', letterSpacing: '0.02em', fontWeight: '600' },
+              ],
+              'body-sm': ['14px', { lineHeight: '22px', fontWeight: '400' }],
+              'title-lg': ['20px', { lineHeight: '28px', fontWeight: '600' }],
+              'display-lg-mobile': [
+                '36px',
+                { lineHeight: '44px', letterSpacing: '-0.02em', fontWeight: '700' },
+              ],
+              'label-sm': [
+                '12px',
+                { lineHeight: '16px', letterSpacing: '0.04em', fontWeight: '600' },
+              ],
+              'headline-md': [
+                '32px',
+                { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '600' },
+              ],
+              'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+              'headline-lg-mobile': [
+                '28px',
+                { lineHeight: '36px', letterSpacing: '-0.015em', fontWeight: '700' },
+              ],
+              'display-lg': [
+                '56px',
+                { lineHeight: '64px', letterSpacing: '-0.02em', fontWeight: '700' },
+              ],
+              'headline-md-mobile': [
+                '24px',
+                { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '600' },
+              ],
+              'title-md': ['18px', { lineHeight: '26px', fontWeight: '600' }],
+              'headline-lg': [
+                '40px',
+                { lineHeight: '48px', letterSpacing: '-0.015em', fontWeight: '700' },
+              ],
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant/40"
+    >
+      <div
+        class="h-20 w-full px-6 md:px-10 lg:px-12 flex items-center justify-between gap-space-lg"
+      >
+        <a class="flex items-center shrink-0" href="index.html">
+          <img
+            alt="Global LabConnect"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/ALJJyrC7khK5IRYWi2y3fvG8zDMo8n47kdy_Et1-MPECErgFLG2pGCKYk_-6Tlaci3yfp8G2e3CiCPG8DlR8vYZQmquV0_1ADHlkIr1dswjT3jocm0e7wsicVaDDfM560Ze7rcMJqfnxUwxslhFHXsiJfnPOuJuSgo6NmVKoVtIW8zn64rIQtJYxaCbKmVYmMU4OeLhejfIG58BHpYcI2-KDICqoxZKUDokzYwLwRIVDLTCcBbDxgD7UBW-dGPE"
+          />
         </a>
-        <div id="services-dropdown-menu" class="absolute left-1/2 -translate-x-1/2 top-full pt-2 hidden group-hover:block z-50 w-[600px]">
-          <div class="bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/40 p-4 grid grid-cols-2 gap-2 text-left">
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#laboratory-capacity">
-              <div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">groups</span>
-              </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">Laboratory Capacity</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">Workforce development</div>
-              </div>
+        <nav class="hidden lg:flex items-center justify-center gap-space-lg mx-auto">
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent"
+            href="about.html"
+            >About</a
+          >
+          <div class="relative py-2 group" id="services-dropdown-container">
+            <a
+              id="services-menu-link"
+              class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary-container transition-colors flex items-center gap-1 cursor-pointer focus:outline-none pb-0.5 border-b-2 border-transparent"
+              href="services.html"
+            >
+              <span>Services</span>
+              <span
+                id="services-chevron"
+                class="material-symbols-outlined text-[18px] transition-transform duration-200 text-outline group-hover:rotate-180"
+                >expand_more</span
+              >
             </a>
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#equipment-support">
-              <div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+            <div
+              id="services-dropdown-menu"
+              class="absolute left-1/2 -translate-x-1/2 top-full pt-2 hidden group-hover:block z-50 w-[600px]"
+            >
+              <div
+                class="bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/40 p-4 grid grid-cols-2 gap-2 text-left"
+              >
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#laboratory-capacity"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">groups</span>
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors"
+                    >
+                      Laboratory Capacity
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      Workforce development
+                    </div>
+                  </div>
+                </a>
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#equipment-support"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >precision_manufacturing</span
+                    >
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors"
+                    >
+                      Equipment Support
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      Diagnostic tech transfer
+                    </div>
+                  </div>
+                </a>
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#quality-management"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors"
+                    >
+                      Quality Management
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      Standards &amp; accreditation
+                    </div>
+                  </div>
+                </a>
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#diagnostic-services"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">biotech</span>
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors"
+                    >
+                      Assay Scale-Up
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      Diagnostic services
+                    </div>
+                  </div>
+                </a>
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#biosafety-biosecurity"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">shield</span>
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors"
+                    >
+                      Biosafety &amp; Biosecurity
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      International best practices
+                    </div>
+                  </div>
+                </a>
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#biorepository-development"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">inventory_2</span>
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors"
+                    >
+                      Biorepository
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      Biospecimen systems
+                    </div>
+                  </div>
+                </a>
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#clinical-trial-support"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">science</span>
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors"
+                    >
+                      Clinical Trial Support
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      Research laboratory readiness
+                    </div>
+                  </div>
+                </a>
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#regulatory-ethics"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">gavel</span>
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors"
+                    >
+                      Regulatory &amp; Ethics
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      Compliance &amp; governance
+                    </div>
+                  </div>
+                </a>
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#amr-surveillance"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">coronavirus</span>
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors"
+                    >
+                      AMR Surveillance
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      Antimicrobial monitoring
+                    </div>
+                  </div>
+                </a>
+                <a
+                  class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item"
+                  href="services.html#outbreak-investigation"
+                >
+                  <div
+                    class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-[18px]">emergency</span>
+                  </div>
+                  <div>
+                    <div
+                      class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors"
+                    >
+                      Outbreak Response
+                    </div>
+                    <div class="text-[12px] leading-tight text-on-surface-variant">
+                      Emergency preparedness
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">Equipment Support</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">Diagnostic tech transfer</div>
-              </div>
-            </a>
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#quality-management">
-              <div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">verified</span>
-              </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">Quality Management</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">Standards &amp; accreditation</div>
-              </div>
-            </a>
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#diagnostic-services">
-              <div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">biotech</span>
-              </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">Assay Scale-Up</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">Diagnostic services</div>
-              </div>
-            </a>
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#biosafety-biosecurity">
-              <div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">shield</span>
-              </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">Biosafety &amp; Biosecurity</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">International best practices</div>
-              </div>
-            </a>
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#biorepository-development">
-              <div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">inventory_2</span>
-              </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">Biorepository</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">Biospecimen systems</div>
-              </div>
-            </a>
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#clinical-trial-support">
-              <div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">science</span>
-              </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">Clinical Trial Support</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">Research laboratory readiness</div>
-              </div>
-            </a>
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#regulatory-ethics">
-              <div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">gavel</span>
-              </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">Regulatory &amp; Ethics</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">Compliance &amp; governance</div>
-              </div>
-            </a>
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#amr-surveillance">
-              <div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">coronavirus</span>
-              </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-primary-container transition-colors">AMR Surveillance</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">Antimicrobial monitoring</div>
-              </div>
-            </a>
-            <a class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-surface-container-low transition-colors group/item" href="services.html#outbreak-investigation">
-              <div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-secondary group-hover/item:text-on-secondary transition-colors">
-                <span class="material-symbols-outlined text-[18px]">emergency</span>
-              </div>
-              <div>
-                <div class="font-semibold text-body-sm text-on-surface group-hover/item:text-secondary transition-colors">Outbreak Response</div>
-                <div class="text-[12px] leading-tight text-on-surface-variant">Emergency preparedness</div>
-              </div>
-            </a>
+            </div>
+          </div>
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent"
+            href="projects.html"
+            >Projects</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent"
+            href="blogs.html"
+            >Blog</a
+          >
+          <a
+            aria-current="page"
+            class="font-label-lg text-label-lg transition-colors text-primary-container font-semibold border-b-2 border-primary-container pb-0.5"
+            href="contact.html"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-3 md:gap-space-lg shrink-0">
+          <a
+            class="hidden sm:inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary hover:text-on-primary font-label-lg text-label-lg px-6 lg:px-7 py-2.5 lg:py-3 transition-colors whitespace-nowrap shadow-sm"
+            href="contact.html"
+            >Partner With Us</a
+          >
+          <button
+            id="mobile-menu-btn"
+            class="lg:hidden p-2 text-on-surface hover:text-primary-container focus:outline-none flex items-center justify-center"
+            aria-label="Toggle menu"
+            type="button"
+          >
+            <span id="mobile-menu-icon" class="material-symbols-outlined text-[28px]">menu</span>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden w-full bg-surface-container-lowest border-t border-outline-variant/30 px-6 py-4 shadow-lg max-h-[calc(100vh-5rem)] overflow-y-auto"
+      >
+        <div class="flex flex-col space-y-3">
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors"
+            href="about.html"
+            >About</a
+          >
+          <div class="border-y border-outline-variant/20 py-1">
+            <button
+              id="mobile-services-btn"
+              class="w-full flex items-center justify-between py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer focus:outline-none"
+              type="button"
+            >
+              <span>Services</span>
+              <span
+                id="mobile-services-chevron"
+                class="material-symbols-outlined text-[20px] transition-transform duration-200"
+                >expand_more</span
+              >
+            </button>
+            <div
+              id="mobile-services-menu"
+              class="hidden pl-2 pr-1 py-2 space-y-2 bg-surface-container-low/60 rounded-xl my-1"
+            >
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#laboratory-capacity"
+              >
+                <span class="material-symbols-outlined text-[18px] text-primary-container"
+                  >groups</span
+                >
+                <span>Laboratory Capacity</span>
+              </a>
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#equipment-support"
+              >
+                <span class="material-symbols-outlined text-[18px] text-secondary"
+                  >precision_manufacturing</span
+                >
+                <span>Equipment Support</span>
+              </a>
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#quality-management"
+              >
+                <span class="material-symbols-outlined text-[18px] text-primary-container"
+                  >verified</span
+                >
+                <span>Quality Management</span>
+              </a>
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#diagnostic-services"
+              >
+                <span class="material-symbols-outlined text-[18px] text-secondary">biotech</span>
+                <span>Assay Scale-Up</span>
+              </a>
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#biosafety-biosecurity"
+              >
+                <span class="material-symbols-outlined text-[18px] text-primary-container"
+                  >shield</span
+                >
+                <span>Biosafety &amp; Biosecurity</span>
+              </a>
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#biorepository-development"
+              >
+                <span class="material-symbols-outlined text-[18px] text-secondary"
+                  >inventory_2</span
+                >
+                <span>Biorepository</span>
+              </a>
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#clinical-trial-support"
+              >
+                <span class="material-symbols-outlined text-[18px] text-primary-container"
+                  >science</span
+                >
+                <span>Clinical Trial Support</span>
+              </a>
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#regulatory-ethics"
+              >
+                <span class="material-symbols-outlined text-[18px] text-secondary">gavel</span>
+                <span>Regulatory &amp; Ethics</span>
+              </a>
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#amr-surveillance"
+              >
+                <span class="material-symbols-outlined text-[18px] text-primary-container"
+                  >coronavirus</span
+                >
+                <span>AMR Surveillance</span>
+              </a>
+              <a
+                class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface"
+                href="services.html#outbreak-investigation"
+              >
+                <span class="material-symbols-outlined text-[18px] text-secondary">emergency</span>
+                <span>Outbreak Response</span>
+              </a>
+            </div>
+          </div>
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors"
+            href="projects.html"
+            >Projects</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors"
+            href="blogs.html"
+            >Blog</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-primary-container font-bold py-2 transition-colors"
+            href="contact.html"
+            >Contact</a
+          >
+          <div class="pt-2 sm:hidden">
+            <a
+              class="w-full inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg py-3 transition-colors shadow-sm"
+              href="contact.html"
+              >Partner With Us</a
+            >
           </div>
         </div>
       </div>
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent" href="projects.html">Projects</a>
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-0.5 border-b-2 border-transparent" href="blogs.html">Blog</a>
-      <a aria-current="page" class="font-label-lg text-label-lg transition-colors text-primary-container font-semibold border-b-2 border-primary-container pb-0.5" href="contact.html">Contact</a>
-    </nav>
-    <div class="flex items-center gap-3 md:gap-space-lg shrink-0">
-      <a class="hidden sm:inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary hover:text-on-primary font-label-lg text-label-lg px-6 lg:px-7 py-2.5 lg:py-3 transition-colors whitespace-nowrap shadow-sm" href="contact.html">Partner With Us</a>
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-on-surface hover:text-primary-container focus:outline-none flex items-center justify-center" aria-label="Toggle menu" type="button">
-        <span id="mobile-menu-icon" class="material-symbols-outlined text-[28px]">menu</span>
-      </button>
-    </div>
-  </div>
-  <div id="mobile-menu" class="hidden lg:hidden w-full bg-surface-container-lowest border-t border-outline-variant/30 px-6 py-4 shadow-lg max-h-[calc(100vh-5rem)] overflow-y-auto">
-    <div class="flex flex-col space-y-3">
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors" href="index.html">Home</a>
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors" href="about.html">About</a>
-      <div class="border-y border-outline-variant/20 py-1">
-        <button id="mobile-services-btn" class="w-full flex items-center justify-between py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer focus:outline-none" type="button">
-          <span>Services</span>
-          <span id="mobile-services-chevron" class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
-        </button>
-        <div id="mobile-services-menu" class="hidden pl-2 pr-1 py-2 space-y-2 bg-surface-container-low/60 rounded-xl my-1">
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#laboratory-capacity">
-            <span class="material-symbols-outlined text-[18px] text-primary-container">groups</span>
-            <span>Laboratory Capacity</span>
-          </a>
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#equipment-support">
-            <span class="material-symbols-outlined text-[18px] text-secondary">precision_manufacturing</span>
-            <span>Equipment Support</span>
-          </a>
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#quality-management">
-            <span class="material-symbols-outlined text-[18px] text-primary-container">verified</span>
-            <span>Quality Management</span>
-          </a>
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#diagnostic-services">
-            <span class="material-symbols-outlined text-[18px] text-secondary">biotech</span>
-            <span>Assay Scale-Up</span>
-          </a>
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#biosafety-biosecurity">
-            <span class="material-symbols-outlined text-[18px] text-primary-container">shield</span>
-            <span>Biosafety &amp; Biosecurity</span>
-          </a>
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#biorepository-development">
-            <span class="material-symbols-outlined text-[18px] text-secondary">inventory_2</span>
-            <span>Biorepository</span>
-          </a>
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#clinical-trial-support">
-            <span class="material-symbols-outlined text-[18px] text-primary-container">science</span>
-            <span>Clinical Trial Support</span>
-          </a>
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#regulatory-ethics">
-            <span class="material-symbols-outlined text-[18px] text-secondary">gavel</span>
-            <span>Regulatory &amp; Ethics</span>
-          </a>
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#amr-surveillance">
-            <span class="material-symbols-outlined text-[18px] text-primary-container">coronavirus</span>
-            <span>AMR Surveillance</span>
-          </a>
-          <a class="flex items-center gap-2.5 p-2 rounded-lg hover:bg-surface-container-lowest transition-colors text-body-sm font-semibold text-on-surface" href="services.html#outbreak-investigation">
-            <span class="material-symbols-outlined text-[18px] text-secondary">emergency</span>
-            <span>Outbreak Response</span>
-          </a>
-        </div>
-      </div>
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors" href="projects.html">Projects</a>
-      <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface py-2 transition-colors" href="blogs.html">Blog</a>
-      <a class="font-label-lg text-label-lg text-primary-container font-bold py-2 transition-colors" href="contact.html">Contact</a>
-      <div class="pt-2 sm:hidden">
-        <a class="w-full inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg py-3 transition-colors shadow-sm" href="contact.html">Partner With Us</a>
-      </div>
-    </div>
-  </div>
-</header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
-<!-- =========================================================================
+    </header>
+    <main class="w-full pt-20 bg-surface">
+      <div class="flex flex-col w-full">
+        <!-- =========================================================================
        1. COMPACT HERO BANNER
        ========================================================================= -->
-<section class="relative w-full bg-inverse-surface overflow-hidden py-16 lg:py-20 text-on-primary">
-<!-- Texture overlay with lab background -->
-<div class="absolute inset-0 z-0 opacity-25 mix-blend-luminosity bg-cover bg-center" data-alt="High-end clinical diagnostic laboratory at night with research technicians using precision pipettes, sterile hood workstations, microscopes, and cold storage bio-banking equipment in deep slate and emerald ambient lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJySmPh2Tufn2c9xzmsjHFvZMd3Wgzcx4dC7GpxgGJgjM50JFCydUoEXGxtYEPwwlzsLmkmPe_9FMJOIeLzG9li0uqYINY70E8BSRq13MG0oZbN4nvxoQqabt7Wb0tAldZRlje5e_JjV_AuF9KRP_mDqG8V1OpIJ4m2Ufj1GL0zxAwC7eieuVZBXun39TIgFrU-qDPD6hzJaA_zOqjsM7KHVo5g1ac2TxdDXQQ5lc')"></div>
-<div class="absolute inset-0 z-0 bg-gradient-to-r from-inverse-surface via-inverse-surface/95 to-inverse-surface/85"></div>
-<div class="relative z-10 max-w-7xl mx-auto px-margin">
-<!-- Breadcrumb -->
-<nav class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-widest text-surface-container-high/70 mb-6">
-<a class="hover:text-surface-bright transition-colors" href="index.html">Home</a>
-<span class="text-surface-container-high/40">›</span>
-<span class="text-surface-bright font-semibold">Contact Us</span>
-</nav>
-<!-- Headline & Subtitle -->
-<div class="max-w-3xl space-y-4">
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg tracking-tight text-surface-bright">
-          Contact Global LabConnect
-        </h1>
-<p class="font-body-lg text-body-lg text-surface-container-high leading-relaxed">
-          Connecting laboratories, public health institutions, researchers, and partners worldwide. Reach out to our technical advisory team or schedule an institutional consultation.
-        </p>
-</div>
-<!-- Assurance Pills -->
-<div class="flex flex-wrap items-center gap-3 pt-8">
-<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-bright font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-secondary-fixed text-base">schedule</span>
-          Direct Response within 24 Hours
-        </div>
-<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-bright font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-secondary-fixed text-base">domain</span>
-          Global Headquarters &amp; Regional Hubs
-        </div>
-<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-bright font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-secondary-fixed text-base">verified</span>
-          RC: 9435175
-        </div>
-</div>
-</div>
-</section>
-<!-- =========================================================================
+        <section
+          class="relative w-full bg-inverse-surface overflow-hidden py-16 lg:py-20 text-on-primary"
+        >
+          <!-- Texture overlay with lab background -->
+          <div
+            class="absolute inset-0 z-0 opacity-25 mix-blend-luminosity bg-cover bg-center"
+            data-alt="High-end clinical diagnostic laboratory at night with research technicians using precision pipettes, sterile hood workstations, microscopes, and cold storage bio-banking equipment in deep slate and emerald ambient lighting"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJySmPh2Tufn2c9xzmsjHFvZMd3Wgzcx4dC7GpxgGJgjM50JFCydUoEXGxtYEPwwlzsLmkmPe_9FMJOIeLzG9li0uqYINY70E8BSRq13MG0oZbN4nvxoQqabt7Wb0tAldZRlje5e_JjV_AuF9KRP_mDqG8V1OpIJ4m2Ufj1GL0zxAwC7eieuVZBXun39TIgFrU-qDPD6hzJaA_zOqjsM7KHVo5g1ac2TxdDXQQ5lc');
+            "
+          ></div>
+          <div
+            class="absolute inset-0 z-0 bg-gradient-to-r from-inverse-surface via-inverse-surface/95 to-inverse-surface/85"
+          ></div>
+          <div class="relative z-10 max-w-7xl mx-auto px-margin">
+            <!-- Breadcrumb -->
+            <nav
+              class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-widest text-surface-container-high/70 mb-6"
+            >
+              <a class="hover:text-surface-bright transition-colors" href="index.html">Home</a>
+              <span class="text-surface-container-high/40">›</span>
+              <span class="text-surface-bright font-semibold">Contact Us</span>
+            </nav>
+            <!-- Headline & Subtitle -->
+            <div class="max-w-3xl space-y-4">
+              <h1
+                class="font-display-lg text-display-lg-mobile md:text-display-lg tracking-tight text-surface-bright"
+              >
+                Contact Global LabConnect
+              </h1>
+              <p class="font-body-lg text-body-lg text-surface-container-high leading-relaxed">
+                Connecting laboratories, public health institutions, researchers, and partners
+                worldwide. Reach out to our technical advisory team or schedule an institutional
+                consultation.
+              </p>
+            </div>
+            <!-- Assurance Pills -->
+            <div class="flex flex-wrap items-center gap-3 pt-8">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-bright font-label-sm text-label-sm"
+              >
+                <span class="material-symbols-outlined text-secondary-fixed text-base"
+                  >schedule</span
+                >
+                Direct Response within 24 Hours
+              </div>
+              <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-bright font-label-sm text-label-sm"
+              >
+                <span class="material-symbols-outlined text-secondary-fixed text-base">domain</span>
+                Global Headquarters &amp; Regional Hubs
+              </div>
+              <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-surface-bright font-label-sm text-label-sm"
+              >
+                <span class="material-symbols-outlined text-secondary-fixed text-base"
+                  >verified</span
+                >
+                RC: 9435175
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- =========================================================================
        2. MAIN CONTACT SECTION & INSTITUTIONAL FORM
        ========================================================================= -->
-<section class="w-full bg-surface-container-lowest py-20 lg:py-28">
-<div class="max-w-7xl mx-auto px-margin">
-<!-- Section Header -->
-<div class="max-w-2xl mb-14">
-<span class="font-label-lg text-label-lg font-bold uppercase tracking-wider text-primary-container block mb-2">
-          Communication &amp; Inquiries
-        </span>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">
-          Let’s Strengthen Healthcare Systems Together
-        </h2>
-</div>
-<!-- Two-Column Grid -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-<!-- COLUMN 1: Contact Details & Hubs (5 Columns) -->
-<div class="lg:col-span-5 space-y-6">
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
-            Global LabConnect interfaces directly with ministries of health, diagnostic pathology networks, research foundations, and hospital leadership to operationalize sustainable lab solutions.
-          </p>
-<!-- Direct Phone & WhatsApp -->
-<div class="bg-surface-container-low rounded-xl p-6 shadow-sm">
-<div class="flex items-center gap-4 mb-4">
-<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-2xl">call</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface">Direct Lines &amp; WhatsApp</h3>
-<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Fast-Track Response</span>
-</div>
-</div>
-<div class="space-y-2 font-body-md text-body-md text-on-surface pl-1">
-<a class="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1" href="tel:+2349129054546">
-<span class="material-symbols-outlined text-secondary text-xl">phone_iphone</span>
-<span>+234-912-905-4546</span>
-</a>
-<a class="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1" href="tel:+2348032424965">
-<span class="material-symbols-outlined text-secondary text-xl">phone_iphone</span>
-<span>+234-803-242-4965</span>
-</a>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-4 pt-3 bg-surface-container-lowest/60 rounded-lg p-3">
-              Available for technical inquiries, urgent advisory, and direct WhatsApp consultations with senior specialists.
-            </p>
-</div>
-<!-- Digital & Electronic Mail -->
-<div class="bg-surface-container-low rounded-xl p-6 shadow-sm">
-<div class="flex items-center gap-4 mb-4">
-<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
-<span class="material-symbols-outlined text-2xl">mail</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface">Electronic Mail</h3>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Institutional Correspondence</span>
-</div>
-</div>
-<div class="space-y-2 font-body-md text-body-md text-on-surface pl-1">
-<a class="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1" href="mailto:info@eclaboratory.com">
-<span class="material-symbols-outlined text-outline text-xl">alternate_email</span>
-<span>info@eclaboratory.com</span>
-</a>
-<a class="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1" href="mailto:contact@globallabconnect.org">
-<span class="material-symbols-outlined text-outline text-xl">mark_email_read</span>
-<span>contact@globallabconnect.org</span>
-</a>
-</div>
-</div>
-<!-- Web & Accreditation -->
-<div class="bg-surface-container-low rounded-xl p-6 shadow-sm">
-<div class="flex items-center gap-4 mb-4">
-<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-2xl">verified_user</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface">Web &amp; Accreditation</h3>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Corporate Registrations</span>
-</div>
-</div>
-<div class="space-y-2 text-on-surface pl-1">
-<a class="flex items-center gap-3 text-primary-container font-semibold hover:underline" href="https://www.eclaboratory.com" rel="noopener" target="_blank">
-<span class="material-symbols-outlined text-xl">language</span>
-<span>www.eclaboratory.com</span>
-</a>
-<p class="font-body-sm text-body-sm text-on-surface-variant italic pl-8">
-                “All Your Tests In One Place”
-              </p>
-<div class="flex items-center gap-3 text-on-surface-variant pt-2">
-<span class="material-symbols-outlined text-outline text-xl">badge</span>
-<span class="font-label-md text-label-md font-semibold text-on-surface">Registration Number: RC 9435175</span>
-</div>
-</div>
-</div>
-<!-- Operational Facilities & Hubs -->
-<div class="bg-surface-container-low rounded-xl p-6 shadow-sm">
-<div class="flex items-center gap-4 mb-4">
-<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
-<span class="material-symbols-outlined text-2xl">location_city</span>
-</div>
-<div>
-<h3 class="font-title-md text-title-md text-on-surface">Operational Facilities &amp; Hubs</h3>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">West Africa Regional Presence</span>
-</div>
-</div>
-<ul class="space-y-3 font-body-sm text-body-sm text-on-surface pl-1">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-secondary text-lg mt-0.5">place</span>
-<div>
-<strong class="font-semibold text-on-surface">Head Office &amp; Central Hub:</strong>
-<p class="text-on-surface-variant">Benin City, Edo State, Nigeria</p>
-</div>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-secondary text-lg mt-0.5">hub</span>
-<div>
-<strong class="font-semibold text-on-surface">Regional Clinical &amp; Bio-surveillance Facilities:</strong>
-<p class="text-on-surface-variant">Irrua Specialist Teaching Hospital &amp; Auchi Hubs</p>
-</div>
-</li>
-<li class="flex items-start gap-3 pt-2">
-<span class="material-symbols-outlined text-secondary text-lg mt-0.5">schedule</span>
-<div>
-<strong class="font-semibold text-on-surface">Operating Hours:</strong>
-<p class="text-on-surface-variant">Monday – Friday: 8:00 AM – 6:00 PM WAT</p>
-<p class="text-secondary font-semibold">Emergency outbreak surveillance 24/7</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<!-- COLUMN 2: Comprehensive Institutional Contact Form (7 Columns) -->
-<div class="lg:col-span-7 bg-surface-container-low rounded-2xl p-8 md:p-12 shadow-md">
-<div class="mb-8">
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Send Us an Inquiry</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-              Fill out the form below and a representative from our technical or advisory team will follow up promptly.
-            </p>
-</div>
-<form class="space-y-6" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formSuccess').classList.remove('hidden'); document.getElementById('contactForm').reset();">
-<!-- Full Name -->
-<div class="space-y-2">
-<label class="block font-label-lg text-label-lg font-semibold text-on-surface" for="fullName">
-                Full Name <span class="text-primary-container">*</span>
-</label>
-<div class="relative">
-<input class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="fullName" placeholder="e.g., Dr. Jane Doe" required="" type="text"/>
-</div>
-</div>
-<!-- Email Address & Organization Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="block font-label-lg text-label-lg font-semibold text-on-surface" for="email">
-                  Email Address <span class="text-primary-container">*</span>
-</label>
-<input class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="email" placeholder="name@organization.org" required="" type="email"/>
-</div>
-<div class="space-y-2">
-<label class="block font-label-lg text-label-lg font-semibold text-on-surface" for="organization">
-                  Organization / Affiliation <span class="text-primary-container">*</span>
-</label>
-<input class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" id="organization" placeholder="e.g., Ministry of Health, Hospital, NGO" required="" type="text"/>
-</div>
-</div>
-<!-- Inquiry Subject -->
-<div class="space-y-2">
-<label class="block font-label-lg text-label-lg font-semibold text-on-surface" for="subject">
-                Program / Inquiry Area <span class="text-primary-container">*</span>
-</label>
-<select class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all appearance-none cursor-pointer" id="subject" required="">
-<option disabled="" selected="" value="">Select Subject</option>
-<option value="training">Laboratory Capacity &amp; Training</option>
-<option value="equipment">Equipment Support &amp; Tech Transfer</option>
-<option value="quality">Quality Management &amp; ISO 15189</option>
-<option value="trials">Clinical Trial &amp; Biobanking</option>
-<option value="general">General Inquiry &amp; Partnership</option>
-</select>
-</div>
-<!-- Message Textarea -->
-<div class="space-y-2">
-<label class="block font-label-lg text-label-lg font-semibold text-on-surface" for="message">
-                Detailed Message <span class="text-primary-container">*</span>
-</label>
-<textarea class="w-full p-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all resize-y" id="message" placeholder="Provide details about your laboratory facility, institutional requirements, or collaboration goals..." required="" rows="5"></textarea>
-</div>
-<!-- Consent Checkbox -->
-<div class="flex items-start gap-3 pt-2">
-<input class="w-5 h-5 mt-1 rounded bg-surface-container-lowest text-secondary focus:ring-secondary cursor-pointer" id="consent" required="" type="checkbox"/>
-<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer select-none" for="consent">
-                I agree to receive communications regarding technical advisory and laboratory solutions from Global LabConnect.
-              </label>
-</div>
-<!-- Submit Button -->
-<div class="pt-4">
-<button class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-semibold px-8 py-4 rounded-full shadow-[0_8px_24px_-4px_rgba(139,0,0,0.3)] transition-all hover:-translate-y-0.5 cursor-pointer" type="submit">
-<span>Submit Inquiry</span>
-<span class="material-symbols-outlined text-xl">arrow_forward</span>
-</button>
-</div>
-</form>
-<!-- Success Feedback Message -->
-<div class="hidden mt-6 p-4 rounded-xl bg-secondary-container text-on-secondary-fixed flex items-center gap-3" id="formSuccess">
-<span class="material-symbols-outlined text-secondary">check_circle</span>
-<span class="font-body-sm text-body-sm font-semibold">Thank you for reaching out. Your inquiry has been routed to our regional advisory team and we will respond within 24 hours.</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- =========================================================================
+        <section class="w-full bg-surface-container-lowest py-20 lg:py-28">
+          <div class="max-w-7xl mx-auto px-margin">
+            <!-- Section Header -->
+            <div class="max-w-2xl mb-14">
+              <span
+                class="font-label-lg text-label-lg font-bold uppercase tracking-wider text-primary-container block mb-2"
+              >
+                Communication &amp; Inquiries
+              </span>
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight"
+              >
+                Let’s Strengthen Healthcare Systems Together
+              </h2>
+            </div>
+            <!-- Two-Column Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+              <!-- COLUMN 1: Contact Details & Hubs (5 Columns) -->
+              <div class="lg:col-span-5 space-y-6">
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                  Global LabConnect interfaces directly with ministries of health, diagnostic
+                  pathology networks, research foundations, and hospital leadership to
+                  operationalize sustainable lab solutions.
+                </p>
+                <!-- Direct Phone & WhatsApp -->
+                <div class="bg-surface-container-low rounded-xl p-6 shadow-sm">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div
+                      class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary"
+                    >
+                      <span class="material-symbols-outlined text-2xl">call</span>
+                    </div>
+                    <div>
+                      <h3 class="font-title-md text-title-md text-on-surface">
+                        Direct Lines &amp; WhatsApp
+                      </h3>
+                      <span
+                        class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider"
+                        >Fast-Track Response</span
+                      >
+                    </div>
+                  </div>
+                  <div class="space-y-2 font-body-md text-body-md text-on-surface pl-1">
+                    <a
+                      class="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
+                      href="tel:+2349129054546"
+                    >
+                      <span class="material-symbols-outlined text-secondary text-xl"
+                        >phone_iphone</span
+                      >
+                      <span>+234-912-905-4546</span>
+                    </a>
+                    <a
+                      class="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
+                      href="tel:+2348032424965"
+                    >
+                      <span class="material-symbols-outlined text-secondary text-xl"
+                        >phone_iphone</span
+                      >
+                      <span>+234-803-242-4965</span>
+                    </a>
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-4 pt-3 bg-surface-container-lowest/60 rounded-lg p-3"
+                  >
+                    Available for technical inquiries, urgent advisory, and direct WhatsApp
+                    consultations with senior specialists.
+                  </p>
+                </div>
+                <!-- Digital & Electronic Mail -->
+                <div class="bg-surface-container-low rounded-xl p-6 shadow-sm">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div
+                      class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container"
+                    >
+                      <span class="material-symbols-outlined text-2xl">mail</span>
+                    </div>
+                    <div>
+                      <h3 class="font-title-md text-title-md text-on-surface">Electronic Mail</h3>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant font-medium"
+                        >Institutional Correspondence</span
+                      >
+                    </div>
+                  </div>
+                  <div class="space-y-2 font-body-md text-body-md text-on-surface pl-1">
+                    <a
+                      class="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
+                      href="mailto:info@eclaboratory.com"
+                    >
+                      <span class="material-symbols-outlined text-outline text-xl"
+                        >alternate_email</span
+                      >
+                      <span>info@eclaboratory.com</span>
+                    </a>
+                    <a
+                      class="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
+                      href="mailto:contact@globallabconnect.org"
+                    >
+                      <span class="material-symbols-outlined text-outline text-xl"
+                        >mark_email_read</span
+                      >
+                      <span>contact@globallabconnect.org</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Web & Accreditation -->
+                <div class="bg-surface-container-low rounded-xl p-6 shadow-sm">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div
+                      class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary"
+                    >
+                      <span class="material-symbols-outlined text-2xl">verified_user</span>
+                    </div>
+                    <div>
+                      <h3 class="font-title-md text-title-md text-on-surface">
+                        Web &amp; Accreditation
+                      </h3>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant font-medium"
+                        >Corporate Registrations</span
+                      >
+                    </div>
+                  </div>
+                  <div class="space-y-2 text-on-surface pl-1">
+                    <a
+                      class="flex items-center gap-3 text-primary-container font-semibold hover:underline"
+                      href="https://www.eclaboratory.com"
+                      rel="noopener"
+                      target="_blank"
+                    >
+                      <span class="material-symbols-outlined text-xl">language</span>
+                      <span>www.eclaboratory.com</span>
+                    </a>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant italic pl-8">
+                      “All Your Tests In One Place”
+                    </p>
+                    <div class="flex items-center gap-3 text-on-surface-variant pt-2">
+                      <span class="material-symbols-outlined text-outline text-xl">badge</span>
+                      <span class="font-label-md text-label-md font-semibold text-on-surface"
+                        >Registration Number: RC 9435175</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- Operational Facilities & Hubs -->
+                <div class="bg-surface-container-low rounded-xl p-6 shadow-sm">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div
+                      class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container"
+                    >
+                      <span class="material-symbols-outlined text-2xl">location_city</span>
+                    </div>
+                    <div>
+                      <h3 class="font-title-md text-title-md text-on-surface">
+                        Operational Facilities &amp; Hubs
+                      </h3>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant font-medium"
+                        >West Africa Regional Presence</span
+                      >
+                    </div>
+                  </div>
+                  <ul class="space-y-3 font-body-sm text-body-sm text-on-surface pl-1">
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-secondary text-lg mt-0.5"
+                        >place</span
+                      >
+                      <div>
+                        <strong class="font-semibold text-on-surface"
+                          >Head Office &amp; Central Hub:</strong
+                        >
+                        <p class="text-on-surface-variant">Benin City, Edo State, Nigeria</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-secondary text-lg mt-0.5"
+                        >hub</span
+                      >
+                      <div>
+                        <strong class="font-semibold text-on-surface"
+                          >Regional Clinical &amp; Bio-surveillance Facilities:</strong
+                        >
+                        <p class="text-on-surface-variant">
+                          Irrua Specialist Teaching Hospital &amp; Auchi Hubs
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start gap-3 pt-2">
+                      <span class="material-symbols-outlined text-secondary text-lg mt-0.5"
+                        >schedule</span
+                      >
+                      <div>
+                        <strong class="font-semibold text-on-surface">Operating Hours:</strong>
+                        <p class="text-on-surface-variant">
+                          Monday – Friday: 8:00 AM – 6:00 PM WAT
+                        </p>
+                        <p class="text-secondary font-semibold">
+                          Emergency outbreak surveillance 24/7
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- COLUMN 2: Comprehensive Institutional Contact Form (7 Columns) -->
+              <div class="lg:col-span-7 bg-surface-container-low rounded-2xl p-8 md:p-12 shadow-md">
+                <div class="mb-8">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+                    Send Us an Inquiry
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Fill out the form below and a representative from our technical or advisory team
+                    will follow up promptly.
+                  </p>
+                </div>
+                <form
+                  class="space-y-6"
+                  id="contactForm"
+                  onsubmit="
+                    event.preventDefault()
+                    document.getElementById('formSuccess').classList.remove('hidden')
+                    document.getElementById('contactForm').reset()
+                  "
+                >
+                  <!-- Full Name -->
+                  <div class="space-y-2">
+                    <label
+                      class="block font-label-lg text-label-lg font-semibold text-on-surface"
+                      for="fullName"
+                    >
+                      Full Name <span class="text-primary-container">*</span>
+                    </label>
+                    <div class="relative">
+                      <input
+                        class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="fullName"
+                        placeholder="e.g., Dr. Jane Doe"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <!-- Email Address & Organization Grid -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                      <label
+                        class="block font-label-lg text-label-lg font-semibold text-on-surface"
+                        for="email"
+                      >
+                        Email Address <span class="text-primary-container">*</span>
+                      </label>
+                      <input
+                        class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="email"
+                        placeholder="name@organization.org"
+                        required=""
+                        type="email"
+                      />
+                    </div>
+                    <div class="space-y-2">
+                      <label
+                        class="block font-label-lg text-label-lg font-semibold text-on-surface"
+                        for="organization"
+                      >
+                        Organization / Affiliation <span class="text-primary-container">*</span>
+                      </label>
+                      <input
+                        class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="organization"
+                        placeholder="e.g., Ministry of Health, Hospital, NGO"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <!-- Inquiry Subject -->
+                  <div class="space-y-2">
+                    <label
+                      class="block font-label-lg text-label-lg font-semibold text-on-surface"
+                      for="subject"
+                    >
+                      Program / Inquiry Area <span class="text-primary-container">*</span>
+                    </label>
+                    <select
+                      class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all appearance-none cursor-pointer"
+                      id="subject"
+                      required=""
+                    >
+                      <option disabled="" selected="" value="">Select Subject</option>
+                      <option value="training">Laboratory Capacity &amp; Training</option>
+                      <option value="equipment">Equipment Support &amp; Tech Transfer</option>
+                      <option value="quality">Quality Management &amp; ISO 15189</option>
+                      <option value="trials">Clinical Trial &amp; Biobanking</option>
+                      <option value="general">General Inquiry &amp; Partnership</option>
+                    </select>
+                  </div>
+                  <!-- Message Textarea -->
+                  <div class="space-y-2">
+                    <label
+                      class="block font-label-lg text-label-lg font-semibold text-on-surface"
+                      for="message"
+                    >
+                      Detailed Message <span class="text-primary-container">*</span>
+                    </label>
+                    <textarea
+                      class="w-full p-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all resize-y"
+                      id="message"
+                      placeholder="Provide details about your laboratory facility, institutional requirements, or collaboration goals..."
+                      required=""
+                      rows="5"
+                    ></textarea>
+                  </div>
+                  <!-- Consent Checkbox -->
+                  <div class="flex items-start gap-3 pt-2">
+                    <input
+                      class="w-5 h-5 mt-1 rounded bg-surface-container-lowest text-secondary focus:ring-secondary cursor-pointer"
+                      id="consent"
+                      required=""
+                      type="checkbox"
+                    />
+                    <label
+                      class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer select-none"
+                      for="consent"
+                    >
+                      I agree to receive communications regarding technical advisory and laboratory
+                      solutions from Global LabConnect.
+                    </label>
+                  </div>
+                  <!-- Submit Button -->
+                  <div class="pt-4">
+                    <button
+                      class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg font-semibold px-8 py-4 rounded-full shadow-[0_8px_24px_-4px_rgba(139,0,0,0.3)] transition-all hover:-translate-y-0.5 cursor-pointer"
+                      type="submit"
+                    >
+                      <span>Submit Inquiry</span>
+                      <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                    </button>
+                  </div>
+                </form>
+                <!-- Success Feedback Message -->
+                <div
+                  class="hidden mt-6 p-4 rounded-xl bg-secondary-container text-on-secondary-fixed flex items-center gap-3"
+                  id="formSuccess"
+                >
+                  <span class="material-symbols-outlined text-secondary">check_circle</span>
+                  <span class="font-body-sm text-body-sm font-semibold"
+                    >Thank you for reaching out. Your inquiry has been routed to our regional
+                    advisory team and we will respond within 24 hours.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- =========================================================================
        3. PRE-FOOTER CTA BAND: PARTNER WITH US
        ========================================================================= -->
-<section class="relative w-full py-20 lg:py-28 bg-inverse-surface overflow-hidden" id="partner-cta">
-<!-- Atmospheric Laboratory Image with 85% Overlay -->
-<div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-15" data-alt="A modern bioanalytical laboratory at twilight with automated robotic analyzers, microplates, and scientists conducting diagnostic tests with glowing LED indicators in deep forest charcoal and clinical emerald green." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc')">
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
-<div class="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block">
-        Collaborative Healthcare Innovation
-      </span>
-<h2 class="font-headline-lg text-headline-lg text-white mb-6">
-        Partner With Us
-      </h2>
-<p class="font-body-lg text-body-lg text-inverse-on-surface/90 mb-10 leading-relaxed">
-        Every accurate diagnosis begins with a strong laboratory. Every resilient health system depends on a competent laboratory workforce. Every successful research programme requires quality laboratory services. Together, we can strengthen diagnostics, accelerate research, improve patient care, and build healthier, safer communities worldwide.
-      </p>
-<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-<a class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-8 py-3.5 transition-all shadow-md hover:shadow-lg" href="#contactForm">
-          Partner With Us
-        </a>
-<a class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all" href="tel:+2349129054546">
-          Speak to a Specialist
-        </a>
-</div>
-</div>
-</section>
-</div></main><!-- Consistent Global Footer -->
-<footer class="w-full bg-[#0D1310] text-[#eaf3ea] border-t border-white/10 pt-16 pb-12" id="contact">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-white/10">
-      <!-- Col 1: Bio, Logo & RC -->
-      <div class="lg:col-span-2 space-y-4">
-        <a class="flex items-center shrink-0" href="index.html">
-          <img alt="Global LabConnect" class="h-8 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ALJJyrC7khK5IRYWi2y3fvG8zDMo8n47kdy_Et1-MPECErgFLG2pGCKYk_-6Tlaci3yfp8G2e3CiCPG8DlR8vYZQmquV0_1ADHlkIr1dswjT3jocm0e7wsicVaDDfM560Ze7rcMJqfnxUwxslhFHXsiJfnPOuJuSgo6NmVKoVtIW8zn64rIQtJYxaCbKmVYmMU4OeLhejfIG58BHpYcI2-KDICqoxZKUDokzYwLwRIVDLTCcBbDxgD7UBW-dGPE"/>
-        </a>
-        <p class="font-body-sm text-body-sm text-inverse-on-surface/70 leading-relaxed max-w-sm">
-          Empowering healthcare systems, scientific laboratories, and diagnostics networks across the globe through quality frameworks, technical development, and capacity building.
-        </p>
-        <div class="space-y-1">
-          <div class="font-label-sm text-label-sm text-secondary-fixed font-semibold tracking-wider">
-            TAGLINE: “All Your Tests In One Place”
-          </div>
-          <div class="font-label-sm text-label-sm text-inverse-on-surface/50 font-mono">
-            Registration RC 9435175
-          </div>
-        </div>
-      </div>
-
-      <!-- Col 2: Quick Links -->
-      <div class="space-y-4">
-        <div class="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">Quick Links</div>
-        <ul class="space-y-2.5 font-body-sm text-body-sm text-inverse-on-surface/70">
-          <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
-          <li><a class="hover:text-white transition-colors" href="about.html">About GLC</a></li>
-          <li><a class="hover:text-white transition-colors" href="services.html">Our Solutions</a></li>
-          <li><a class="hover:text-white transition-colors" href="projects.html">Projects &amp; Impact</a></li>
-          <li><a class="hover:text-white transition-colors" href="blogs.html">Blog &amp; Publications</a></li>
-          <li><a class="text-secondary-fixed font-semibold" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 3: Core Focus -->
-      <div class="space-y-4">
-        <div class="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">Core Focus</div>
-        <ul class="space-y-2.5 font-body-sm text-body-sm text-inverse-on-surface/70">
-          <li><a class="hover:text-white transition-colors" href="services.html#laboratory-capacity">Workforce Training</a></li>
-          <li><a class="hover:text-white transition-colors" href="services.html#quality-management">ISO 15189 Standards</a></li>
-          <li><a class="hover:text-white transition-colors" href="services.html#equipment-support">Technology Transfer</a></li>
-          <li><a class="hover:text-white transition-colors" href="services.html#clinical-trial-support">Clinical Research Support</a></li>
-          <li><a class="hover:text-white transition-colors" href="services.html#amr-surveillance">AMR Surveillance</a></li>
-          <li><a class="hover:text-white transition-colors" href="services.html#outbreak-investigation">Outbreak Readiness</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 4: Contact Us -->
-      <div class="space-y-4 lg:col-span-1">
-        <div class="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">Contact Us</div>
-        <div class="space-y-3 font-body-sm text-body-sm text-inverse-on-surface/80">
-          <div class="flex items-center gap-2.5">
-            <span class="material-symbols-outlined text-secondary-fixed text-lg">call</span>
-            <div class="flex flex-col">
-              <a class="hover:text-white transition-colors" href="tel:+2349129054546">+234-912-905-4546</a>
-              <a class="hover:text-white transition-colors" href="tel:+2348032424965">+234-803-242-4965</a>
+        <section
+          class="relative w-full py-20 lg:py-28 bg-inverse-surface overflow-hidden"
+          id="partner-cta"
+        >
+          <!-- Atmospheric Laboratory Image with 85% Overlay -->
+          <div
+            class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-15"
+            data-alt="A modern bioanalytical laboratory at twilight with automated robotic analyzers, microplates, and scientists conducting diagnostic tests with glowing LED indicators in deep forest charcoal and clinical emerald green."
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc');
+            "
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"
+          ></div>
+          <div class="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
+            <span
+              class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block"
+            >
+              Collaborative Healthcare Innovation
+            </span>
+            <h2 class="font-headline-lg text-headline-lg text-white mb-6">Partner With Us</h2>
+            <p class="font-body-lg text-body-lg text-inverse-on-surface/90 mb-10 leading-relaxed">
+              Every accurate diagnosis begins with a strong laboratory. Every resilient health
+              system depends on a competent laboratory workforce. Every successful research
+              programme requires quality laboratory services. Together, we can strengthen
+              diagnostics, accelerate research, improve patient care, and build healthier, safer
+              communities worldwide.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-8 py-3.5 transition-all shadow-md hover:shadow-lg"
+                href="#contactForm"
+              >
+                Partner With Us
+              </a>
+              <a
+                class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all"
+                href="tel:+2349129054546"
+              >
+                Speak to a Specialist
+              </a>
             </div>
           </div>
-          <div class="flex items-center gap-2.5">
-            <span class="material-symbols-outlined text-secondary-fixed text-lg">mail</span>
-            <div class="flex flex-col">
-              <a class="hover:text-white transition-colors" href="mailto:info@eclaboratory.com">info@eclaboratory.com</a>
-              <a class="hover:text-white transition-colors" href="mailto:contact@globallabconnect.org">contact@globallabconnect.org</a>
-            </div>
-          </div>
-          <div class="flex items-center gap-2.5">
-            <span class="material-symbols-outlined text-secondary-fixed text-lg">language</span>
-            <a class="hover:text-white transition-colors" href="https://www.eclaboratory.com" rel="noopener noreferrer" target="_blank">
-              www.eclaboratory.com
+        </section>
+      </div>
+    </main>
+    <!-- Consistent Global Footer -->
+    <footer
+      class="w-full bg-[#0D1310] text-[#eaf3ea] border-t border-white/10 pt-16 pb-12"
+      id="contact"
+    >
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-white/10"
+        >
+          <!-- Col 1: Bio, Logo & RC -->
+          <div class="lg:col-span-2 space-y-4">
+            <a class="flex items-center shrink-0" href="index.html">
+              <img
+                alt="Global LabConnect"
+                class="h-8 w-auto object-contain brightness-0 invert"
+                src="https://lh3.googleusercontent.com/aida/ALJJyrC7khK5IRYWi2y3fvG8zDMo8n47kdy_Et1-MPECErgFLG2pGCKYk_-6Tlaci3yfp8G2e3CiCPG8DlR8vYZQmquV0_1ADHlkIr1dswjT3jocm0e7wsicVaDDfM560Ze7rcMJqfnxUwxslhFHXsiJfnPOuJuSgo6NmVKoVtIW8zn64rIQtJYxaCbKmVYmMU4OeLhejfIG58BHpYcI2-KDICqoxZKUDokzYwLwRIVDLTCcBbDxgD7UBW-dGPE"
+              />
             </a>
+            <p
+              class="font-body-sm text-body-sm text-inverse-on-surface/70 leading-relaxed max-w-sm"
+            >
+              Empowering healthcare systems, scientific laboratories, and diagnostics networks
+              across the globe through quality frameworks, technical development, and capacity
+              building.
+            </p>
+            <div class="space-y-1">
+              <div
+                class="font-label-sm text-label-sm text-secondary-fixed font-semibold tracking-wider"
+              >
+                TAGLINE: “All Your Tests In One Place”
+              </div>
+              <div class="font-label-sm text-label-sm text-inverse-on-surface/50 font-mono">
+                Registration RC 9435175
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div class="space-y-4">
+            <div class="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">
+              Quick Links
+            </div>
+            <ul class="space-y-2.5 font-body-sm text-body-sm text-inverse-on-surface/70">
+              <li><a class="hover:text-white transition-colors" href="index.html">Home</a></li>
+              <li><a class="hover:text-white transition-colors" href="about.html">About GLC</a></li>
+              <li>
+                <a class="hover:text-white transition-colors" href="services.html">Our Solutions</a>
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="projects.html"
+                  >Projects &amp; Impact</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="blogs.html"
+                  >Blog &amp; Publications</a
+                >
+              </li>
+              <li><a class="text-secondary-fixed font-semibold" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Core Focus -->
+          <div class="space-y-4">
+            <div class="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">
+              Core Focus
+            </div>
+            <ul class="space-y-2.5 font-body-sm text-body-sm text-inverse-on-surface/70">
+              <li>
+                <a
+                  class="hover:text-white transition-colors"
+                  href="services.html#laboratory-capacity"
+                  >Workforce Training</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition-colors"
+                  href="services.html#quality-management"
+                  >ISO 15189 Standards</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="services.html#equipment-support"
+                  >Technology Transfer</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition-colors"
+                  href="services.html#clinical-trial-support"
+                  >Clinical Research Support</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition-colors" href="services.html#amr-surveillance"
+                  >AMR Surveillance</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition-colors"
+                  href="services.html#outbreak-investigation"
+                  >Outbreak Readiness</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Contact Us -->
+          <div class="space-y-4 lg:col-span-1">
+            <div class="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">
+              Contact Us
+            </div>
+            <div class="space-y-3 font-body-sm text-body-sm text-inverse-on-surface/80">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary-fixed text-lg">call</span>
+                <div class="flex flex-col">
+                  <a class="hover:text-white transition-colors" href="tel:+2349129054546"
+                    >+234-912-905-4546</a
+                  >
+                  <a class="hover:text-white transition-colors" href="tel:+2348032424965"
+                    >+234-803-242-4965</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary-fixed text-lg">mail</span>
+                <div class="flex flex-col">
+                  <a class="hover:text-white transition-colors" href="mailto:info@eclaboratory.com"
+                    >info@eclaboratory.com</a
+                  >
+                  <a
+                    class="hover:text-white transition-colors"
+                    href="mailto:contact@globallabconnect.org"
+                    >contact@globallabconnect.org</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-secondary-fixed text-lg">language</span>
+                <a
+                  class="hover:text-white transition-colors"
+                  href="https://www.eclaboratory.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  www.eclaboratory.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legal Sub-Footer -->
+        <div
+          class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-inverse-on-surface/50"
+        >
+          <div>
+            © 2026 Global LabConnect. All rights reserved. Registered under Nigerian CAC laws (RC
+            9435175).
+          </div>
+          <div class="flex items-center gap-6">
+            <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+            <a class="hover:text-white transition-colors" href="#">Terms of Technical Engagement</a>
+            <a class="hover:text-white transition-colors" href="#">Ethics &amp; Governance</a>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
 
-    <!-- Legal Sub-Footer -->
-    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-inverse-on-surface/50">
-      <div>
-        © 2026 Global LabConnect. All rights reserved. Registered under Nigerian CAC laws (RC 9435175).
-      </div>
-      <div class="flex items-center gap-6">
-        <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-        <a class="hover:text-white transition-colors" href="#">Terms of Technical Engagement</a>
-        <a class="hover:text-white transition-colors" href="#">Ethics &amp; Governance</a>
-      </div>
-    </div>
-  </div>
-</footer>
+    <script>
+      // Mobile menu toggle & mobile services accordion
+      document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn')
+        const mobileMenu = document.getElementById('mobile-menu')
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon')
 
-<script>
-  // Mobile menu toggle & mobile services accordion
-  document.addEventListener('DOMContentLoaded', function () {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', function () {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        if (isHidden) {
-          mobileMenu.classList.remove('hidden');
-          if (mobileMenuIcon) mobileMenuIcon.textContent = 'close';
-        } else {
-          mobileMenu.classList.add('hidden');
-          if (mobileMenuIcon) mobileMenuIcon.textContent = 'menu';
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener('click', function () {
+            const isHidden = mobileMenu.classList.contains('hidden')
+            if (isHidden) {
+              mobileMenu.classList.remove('hidden')
+              if (mobileMenuIcon) mobileMenuIcon.textContent = 'close'
+            } else {
+              mobileMenu.classList.add('hidden')
+              if (mobileMenuIcon) mobileMenuIcon.textContent = 'menu'
+            }
+          })
         }
-      });
-    }
 
-    const mobileServicesBtn = document.getElementById('mobile-services-btn');
-    const mobileServicesMenu = document.getElementById('mobile-services-menu');
-    const mobileServicesChevron = document.getElementById('mobile-services-chevron');
+        const mobileServicesBtn = document.getElementById('mobile-services-btn')
+        const mobileServicesMenu = document.getElementById('mobile-services-menu')
+        const mobileServicesChevron = document.getElementById('mobile-services-chevron')
 
-    if (mobileServicesBtn && mobileServicesMenu) {
-      mobileServicesBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        const isHidden = mobileServicesMenu.classList.contains('hidden');
-        if (isHidden) {
-          mobileServicesMenu.classList.remove('hidden');
-          if (mobileServicesChevron) mobileServicesChevron.classList.add('rotate-180');
-        } else {
-          mobileServicesMenu.classList.add('hidden');
-          if (mobileServicesChevron) mobileServicesChevron.classList.remove('rotate-180');
+        if (mobileServicesBtn && mobileServicesMenu) {
+          mobileServicesBtn.addEventListener('click', function (e) {
+            e.preventDefault()
+            const isHidden = mobileServicesMenu.classList.contains('hidden')
+            if (isHidden) {
+              mobileServicesMenu.classList.remove('hidden')
+              if (mobileServicesChevron) mobileServicesChevron.classList.add('rotate-180')
+            } else {
+              mobileServicesMenu.classList.add('hidden')
+              if (mobileServicesChevron) mobileServicesChevron.classList.remove('rotate-180')
+            }
+          })
         }
-      });
-    }
-  });
-</script>
-</body></html>
+      })
+    </script>
+  </body>
+</html>
