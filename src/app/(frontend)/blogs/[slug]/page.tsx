@@ -9,7 +9,7 @@ export default function BlogSingleSlugPage() {
       <div className="flex flex-col w-full">
         {/* Section 1: Inner Article Header (Compact Dark Hero) */}
         <section className="relative bg-inverse-surface text-inverse-on-surface py-14 lg:py-20 overflow-hidden">
-          <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#86f886_1px,transparent_1px)] [background-size:24px_24px]"></div>
+          <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#86f886_1px,transparent_1px)] bg-size-[24px_24px]"></div>
           <div className="relative max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-start">
             {/* Navigation & Breadcrumbs Row */}
             <div className="w-full flex flex-wrap items-center justify-between gap-4 mb-8">
@@ -25,7 +25,7 @@ export default function BlogSingleSlugPage() {
                   BLOG &amp; INSIGHTS
                 </Link>
                 <ChevronRight className="w-3.5 h-3.5 text-secondary-fixed" />
-                <span className="text-secondary-fixed font-semibold truncate max-w-[200px] sm:max-w-md">
+                <span className="text-secondary-fixed font-semibold truncate max-w-50 sm:max-w-md">
                   AMR SURVEILLANCE
                 </span>
               </nav>
@@ -91,7 +91,7 @@ export default function BlogSingleSlugPage() {
           <div className="max-w-5xl mx-auto px-6 lg:px-8">
             {/* Featured Visual & Caption */}
             <figure className="mb-14">
-              <div className="w-full overflow-hidden rounded-2xl shadow-xl bg-surface-container-highest aspect-[16/9] relative">
+              <div className="w-full overflow-hidden rounded-2xl shadow-xl bg-surface-container-highest aspect-video relative">
                 <img
                   className="w-full h-full object-cover"
                   data-alt="Modern clinical biosafety level three research laboratory with scientists in protective gear conducting molecular extraction tests under laminar flow hood with diagnostic equipment and high-contrast ambient laboratory lighting"
@@ -378,7 +378,7 @@ export default function BlogSingleSlugPage() {
                     </p>
                   </div>
                   <div className="pt-4 border-t border-surface-variant/20 flex items-center justify-between">
-                    <span className="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[180px]">
+                    <span className="font-label-sm text-label-sm text-on-surface-variant truncate max-w-45">
                       [Institutional Advisory Team]
                     </span>
                     <a
@@ -424,7 +424,7 @@ export default function BlogSingleSlugPage() {
                     </p>
                   </div>
                   <div className="pt-4 border-t border-surface-variant/20 flex items-center justify-between">
-                    <span className="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[180px]">
+                    <span className="font-label-sm text-label-sm text-on-surface-variant truncate max-w-45">
                       [Dr. Specialist Name]
                     </span>
                     <a
@@ -469,7 +469,7 @@ export default function BlogSingleSlugPage() {
                     </p>
                   </div>
                   <div className="pt-4 border-t border-surface-variant/20 flex items-center justify-between">
-                    <span className="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[180px]">
+                    <span className="font-label-sm text-label-sm text-on-surface-variant truncate max-w-45">
                       [Training Directorate]
                     </span>
                     <a
@@ -498,7 +498,7 @@ export default function BlogSingleSlugPage() {
                 "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
           <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block">
               Collaborative Healthcare Innovation
@@ -520,7 +520,7 @@ export default function BlogSingleSlugPage() {
               </a>
               <a
                 className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all"
-                href="/contact"
+                href="tel:+2348032424965"
               >
                 Speak to a Specialist
               </a>

@@ -170,19 +170,13 @@ export default function Footer() {
                 <div className="flex flex-col">
                   <a
                     className="hover:text-white transition-colors"
-                    href="mailto:info@eclaboratory.com"
+                    href="mailto:contact@globallabconnect.com"
                   >
-                    info@eclaboratory.com
-                  </a>
-                  <a
-                    className="hover:text-white transition-colors"
-                    href="mailto:contact@globallabconnect.org"
-                  >
-                    contact@globallabconnect.org
+                    contact@globallabconnect.com
                   </a>
                 </div>
               </div>
-              <div className="flex items-center gap-2.5">
+              {/* <div className="flex items-center gap-2.5">
                 <Globe className="w-4 h-4 text-secondary-fixed shrink-0" />
                 <a
                   className="hover:text-white transition-colors"
@@ -192,7 +186,7 @@ export default function Footer() {
                 >
                   www.eclaboratory.com
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -200,7 +194,7 @@ export default function Footer() {
         {/* Legal Sub-Footer */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-inverse-on-surface/50">
           <div>
-            © 2026 Global LabConnect. All rights reserved. Registered under Nigerian CAC laws (RC
+            © {new Date().getFullYear()} Global LabConnect. All rights reserved. Registered under Nigerian CAC laws (RC
             9435175).
           </div>
           <div className="flex items-center gap-6">

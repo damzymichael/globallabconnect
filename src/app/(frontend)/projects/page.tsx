@@ -15,8 +15,8 @@ export default function ProjectsPage() {
               data-alt="A moody, high-precision clinical and biomedical research laboratory interior at night with scientists in navy coats using microscopes and pipettes in focused lighting"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnky9P6fE-qsIeCGI7CW9yW8LKyWAERwhzVyUMWZGWqd6zP92pU8_njOB4g5rd-2nDGJYiP7Al7kwMBVagG2sIOPk5hvw1h6vvUHsSS2tT6hhHzHerdqvQMeUZFlUBZX-u54D-Ebhh9-B_3YXJKKjn_aqzL3w8qwra3AjmRmUzvj_QWA8GfNKa-EuWH4gNfPCeAKIwDH6sPphMKZBqkYcOuE62aqYRUrw9gvoz_S4"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#131B16] via-[#131B16]/90 to-[#131B16]/75"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#131B16] via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-[#131B16] via-[#131B16]/90 to-[#131B16]/75"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-[#131B16] via-transparent to-transparent"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 flex flex-col">
             {/* Breadcrumb */}
@@ -137,7 +137,7 @@ export default function ProjectsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
               {/* Left Column: Visual Media & Thumbnails */}
               <div className="lg:col-span-5 flex flex-col gap-4">
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md group">
+                <div className="relative w-full aspect-4/3 rounded-xl overflow-hidden shadow-md group">
                   <img
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     data-alt="Female biomedical laboratory researcher calibrating automated real-time PCR analyzer and microplates in an advanced clean room diagnostics facility"
@@ -156,7 +156,7 @@ export default function ProjectsPage() {
                       data-alt="Laboratory biosafety technician carrying out biological specimen intake and containment inspection at primary intake station"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuANtqFwNYZ03SZBJQ_SR9cIpvBt9DLesqB9hmX1VG1fmmKsK1jKPzaQbyU8P09XAcS0WSxUF0-_3ExCqcziBkQ8ph53NUJTmH0fTnA46loB1EmxwqhafRnYTLuCCA11MOHJw3KMED7XV-MVYX7oU2Ty4sj5yHTgjVyE6NTW7yEwz2dmn2-qUOAQKzUyypqEuOUShnBVpxvR0SKxPe_4EYZcdLZR7iTTtZsqnWQZMyM"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
                       <span className="text-[11px] font-semibold text-white truncate">
                         [Facility Assessment]
                       </span>
@@ -168,7 +168,7 @@ export default function ProjectsPage() {
                       data-alt="Senior laboratory mentors instructing technicians in pipetting calibration and clean molecular reagent preparation"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz6o1RUlIqTUOQH6QAGiFPGQbN1SCn63ZWxiwRXzl62_CgF3mQ028Xogstb5TZTWAW1DyoHZJbTuCy3gZ5dWR2ThvOjS6W4B6wHBNpN6rWj_gAB96JByXvpknMWvT-_L_4tE1h-ajDNIt0XeM6Dii51L19su622vGxU3vLDWXOjG9cF1AdeOUdnubbs6N37tESDrttDULfsY4KHUqD_XajyaTsepyOqM5BxPEwAGU"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
                       <span className="text-[11px] font-semibold text-white truncate">
                         [Workforce Training Session]
                       </span>
@@ -180,7 +180,7 @@ export default function ProjectsPage() {
                       data-alt="Row of calibrated automated molecular diagnostic sequencers and testing workstations running diagnostic quality validations"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0bpdS-dCM5t6JaR9B291qnbgj73Vno4Yxopt3MH3779eoQYN0K1Rqv5Y3MypA56r7e493aRXPej8yhTCEE5xXKeK7_SRkmGjsFtIC8-tWQPkayEzzXn80JnSM60JqLJkQAGwK3UOrm0M_4VV53yK-S_fhFbsa5eEQtUrko191LMPkRH2KrNPdYbzPhWrTROuY3hfA8P9rWMk7yyFF3IXCpVIyxwW-dJ_Vmscaock"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
                       <span className="text-[11px] font-semibold text-white truncate">
                         [Validated Laboratory Equipment]
                       </span>
@@ -510,7 +510,7 @@ export default function ProjectsPage() {
               </div>
               {/* Right Column: Visual Media & Thumbnails */}
               <div className="lg:col-span-5 flex flex-col gap-4 order-1 lg:order-2">
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md group">
+                <div className="relative w-full aspect-4/3 rounded-xl overflow-hidden shadow-md group">
                   <img
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     data-alt="Two laboratory medical specialists reviewing analytical readout curves on high-resolution clinical monitors beside diagnostic equipment"
@@ -529,7 +529,7 @@ export default function ProjectsPage() {
                       data-alt="Biomedical engineer conducting precise optical calibration on an automated clinical chemistry platform"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6BbKyeQtRw33vzzdi2gludQe_azJkqx6PVfaQRrcft5CrKYaKBV_WVKkJ-QrZftTSprxXP7IOJlVfwtI7ZMH8i6Ylof5hlazvHxSTyA6IZvm0K2xmloptDkEJ-5k_x6B7cuqza3MhQUEzYxkT7VmSFBOfypLLBdng2WkMyOeUXP69YbLRraW-UNvRVfwNg8QcO2EAqIrfHL6Pb1uCphsWIZUSA4fXob6gmv8eZVs"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
                       <span className="text-[11px] font-semibold text-white truncate">
                         [Equipment Inspection]
                       </span>
@@ -541,7 +541,7 @@ export default function ProjectsPage() {
                       data-alt="Quality control supervisor reviewing audit binders and ISO compliance checklists with laboratory personnel"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmy8TcxYG2iXqizaezzXTYs2fztAgRg3DmX_MdVYI0g3lmsYsq6PthXgRFoHkFnC7QTPSUeTtbKB5mVaWukpt5ezADf6oTckASZi9cxDWcrky77vg04A5hNo5iB87V6X7l9hIZfJjEDJ5mTD_5pcxjbZycGA0RZCj490E5RRFKd8le8c-lyI5qsDFriyDklvqEeNtsLJsU0HssJz_O8FSFTPMerh4awJ8xK5n-c3g"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
                       <span className="text-[11px] font-semibold text-white truncate">
                         [Audit Simulation]
                       </span>
@@ -553,7 +553,7 @@ export default function ProjectsPage() {
                       data-alt="Organized laboratory reagents cold storage units with calibrated temperature logging hardware"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWaljUa2acRJk1FtMRfZKNenm-oO7X0l8LCary5IWhkuQ14ezWlC9609ejhjuQc1xEcpi-6XEYpmqDQvU_ml9yhA2SSdmh-gRWFpXMHgv3SfS4lpA43T0g7m7oAFiJq0fHRYHLgBgb-G4Fm91M63btjTyKtzLMiRdzGdJFpUmRMF1RbbMbkg-awVT6U81RfeEaxbd_cTEy-eoAEJwriXxgRmVxY0COquC3UctlDHk"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
                       <span className="text-[11px] font-semibold text-white truncate">
                         [Cold Chain Control]
                       </span>
@@ -570,7 +570,7 @@ export default function ProjectsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
               {/* Left Column: Visual Media & Thumbnails */}
               <div className="lg:col-span-5 flex flex-col gap-4">
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-md group">
+                <div className="relative w-full aspect-4/3 rounded-xl overflow-hidden shadow-md group">
                   <img
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     data-alt="Field laboratory rapid response team handling mobile diagnostic multiplex testing kits in a climate-controlled containment facility"
@@ -589,7 +589,7 @@ export default function ProjectsPage() {
                       data-alt="Epidemiological laboratory team sorting viral transport media tubes in high-containment biosafety hood"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwvwI41a_-A0E6PDwmZZsX54rTNtt13U8pxwgiMG6J4ZcopUnxoSi3Jt3rt3pLxfWpmw_ZzyrWBxQj8fkOXidqwB7YnKWtm-V0-AP7SYuDjZwLEBABpgdjSDxytqjezsagKuVdptDnepcMuPFRt_6ggSAWyi5knrtaaw6ugvl4rHp4jkLJl3NqlYfMioIbLrzLv_EOp25xZmVSL1ED9nl8Tc0lQmutpmI1D8bcIRI"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
                       <span className="text-[11px] font-semibold text-white truncate">
                         [Field Sample Triage]
                       </span>
@@ -601,7 +601,7 @@ export default function ProjectsPage() {
                       data-alt="Technician operating mobile sequencing platform during decentralized outbreak simulation drill"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm9k_KlsTMHq--FRHJRwCZPePy6FdXF1R4n0hxfzEAe1vHpvVXFub0gyjw4xdd7rqtZDOJFbCXqOtdNE6GSejGh0W02vpRfVIRkno_Hsc1QRZ0vBNBaxg5Eo7wdXYqE__bVA-GZ_gJW8bD9gchCpJ5HzuJvf-BgGWR0OK4chZB0I8oUDD0NnzQXeIeGxEKyW3HTajNsJB5xKVcJrFmNs4KfOPIjhS2e-UT02GtySo"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
                       <span className="text-[11px] font-semibold text-white truncate">
                         [Mobile Sequencing]
                       </span>
@@ -613,7 +613,7 @@ export default function ProjectsPage() {
                       data-alt="Epidemic surveillance control room displaying real-time geographic transmission maps and laboratory confirmation graphs"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9PM-ykJnWYWqXerLVLQNUQnf7XJKpsZTl5WZoNRoyPTafCdJRChOmwZnSvDSLiN7XJadZTEHTxzElylhxrIyP8aae4xyuxjVXauwuJ_btYN4YV47wKo84P510w5J37X-YLO7lALKhu2l2VebUxuxt0ZRmaDrEXYE-ihnXl3W7dMvGrHhO9l9hVp1UG7t4oFp2hBS-2pPu8eSVZlqApyTupi3BhOHSsTU9z_dcRwc"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
                       <span className="text-[11px] font-semibold text-white truncate">
                         [Data Interoperability]
                       </span>
@@ -793,7 +793,7 @@ export default function ProjectsPage() {
                 "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
           <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block">
               Collaborative Healthcare Innovation
@@ -815,7 +815,7 @@ export default function ProjectsPage() {
               </a>
               <a
                 className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all"
-                href="/contact"
+                href="tel:+2348032424965"
               >
                 Speak to a Specialist
               </a>

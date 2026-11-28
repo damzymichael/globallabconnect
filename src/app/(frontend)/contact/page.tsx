@@ -138,17 +138,10 @@ export default function ContactPage() {
                   <div className="space-y-2 font-body-md text-body-md text-on-surface pl-1">
                     <a
                       className="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
-                      href="mailto:info@eclaboratory.com"
-                    >
-                      <Icon name="alternate_email" className=" text-outline text-xl" />
-                      <span>info@eclaboratory.com</span>
-                    </a>
-                    <a
-                      className="flex items-center gap-3 text-on-surface hover:text-primary-container transition-colors py-1"
-                      href="mailto:contact@globallabconnect.org"
+                      href="mailto:contact@globallabconnect.com"
                     >
                       <Icon name="mark_email_read" className=" text-outline text-xl" />
-                      <span>contact@globallabconnect.org</span>
+                      <span>contact@globallabconnect.com</span>
                     </a>
                   </div>
                 </div>
@@ -388,7 +381,7 @@ export default function ContactPage() {
               </a>
               <a
                 className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all"
-                href="tel:+2349129054546"
+                href="tel:+2348032424965"
               >
                 Speak to a Specialist
               </a>

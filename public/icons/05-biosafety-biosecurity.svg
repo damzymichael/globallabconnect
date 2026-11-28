@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="biosafety biosecurity">
+<circle cx="64" cy="64" r="60" fill="#F4F8F5" stroke="#008A27" stroke-width="4"/>
+<g fill="none" stroke="#1A1D1A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<g stroke="#8B0000" stroke-width="5.5" fill="none">
+<circle cx="58" cy="46" r="15"/><circle cx="71" cy="69" r="15"/><circle cx="45" cy="69" r="15"/>
+</g>
+<circle cx="58" cy="61" r="6" fill="#FFFFFF" stroke="#8B0000" stroke-width="3.5"/>
+<path d="M88 68 L105 74 V89 C105 99 97 105 88 109 C79 105 71 99 71 89 V74 Z" fill="#008A27" stroke="#FFFFFF" stroke-width="3.5"/>
+<path d="M80 88 l6 6 l11 -12" stroke="#FFFFFF" stroke-width="4"/>
+</g>
+</svg>

@@ -344,6 +344,210 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <section
+          id="core-pillars"
+          className="scroll-mt-24 w-full bg-surface-container-lowest py-20 lg:py-28"
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+              <div className="max-w-3xl">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold mb-3">
+                  FOUNDATIONAL ARCHITECTURE
+                </div>
+                <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+                  Core Pillars of Global LabConnect
+                </h2>
+                <p className="font-body-lg text-body-lg text-on-surface-variant mt-2">
+                  Ten structured domains delivering resilient laboratory infrastructure, quality
+                  diagnostics, and public health impact worldwide.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {/* Pillar 01 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/01-training-capacity-building.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Training &amp; Capacity Building
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Developing a skilled and competent laboratory workforce.
+                  </p>
+                </div>
+              </div>
+              {/* Pillar 02 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/02-equipment-support-technology-transfer.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Equipment Support &amp; Technology Transfer
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Expanding access to modern, reliable and sustainable diagnostic technologies.
+                  </p>
+                </div>
+              </div>
+              {/* Pillar 03 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/03-quality-management-systems.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Quality Management Systems
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Ensuring quality excellence through international standards and accreditation.
+                  </p>
+                </div>
+              </div>
+              {/* Pillar 04 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/04-diagnostic-services-assay-scale-up.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Diagnostic Services &amp; Assay Scale-Up
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Improving access to accurate and timely diagnostic service.
+                  </p>
+                </div>
+              </div>
+              {/* Pillar 05 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/05-biosafety-biosecurity.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Biosafety &amp; Biosecurity
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Promoting safe laboratory practices and protecting people and communities.
+                  </p>
+                </div>
+              </div>
+              {/* Pillar 06 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/06-biorepository-development.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Biorepository Development
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Strengthening research through high-quality biospecimen management.
+                  </p>
+                </div>
+              </div>
+              {/* Pillar 07 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/07-clinical-trial-laboratory-support.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Clinical Trial Laboratory Support
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Supporting high-quality laboratories for world-class clinical research.
+                  </p>
+                </div>
+              </div>
+              {/* Pillar 08 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/08-regulatory-ethics-support.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Regulatory &amp; Ethics Support
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Facilitating compliance with ethical, regulatory and policy requirements.
+                  </p>
+                </div>
+              </div>
+              {/* Pillar 09 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/09-antimicrobial-resistance-surveillance.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Antimicrobial Resistance Surveillance
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Combating antimicrobial resistance through surveillance, data and collaboration.
+                  </p>
+                </div>
+              </div>
+              {/* Pillar 10 */}
+              <div className="flex items-start gap-5 p-6 rounded-2xl bg-surface-container-low transition-all duration-200 hover:shadow-md hover:bg-surface-container">
+                <img
+                  src="/icons/10-outbreak-investigation-emergency-response.svg"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 shrink-0"
+                />
+                <div className="space-y-1">
+                  <h3 className="font-title-lg text-title-lg text-on-surface">
+                    Outbreak Investigation &amp; Emergency Response
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface-variant">
+                    Enhancing preparedness and response to public health emergencies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* 5. Section 4: Leadership Profile (CEO Profile in Soft Sage Mist) */}
         <section className="w-full bg-surface-container-low py-20 lg:py-28">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -508,7 +712,7 @@ export default function AboutPage() {
               </a>
               <a
                 className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all"
-                href="/contact"
+                href="tel:+2348032424965"
               >
                 Speak to a Specialist
               </a>

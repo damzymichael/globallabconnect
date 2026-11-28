@@ -41,14 +41,19 @@ export default function HomePage() {
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             <div className="absolute right-0 top-0 bottom-0 w-full lg:w-3/5 h-full">
               <img
-                className="w-full h-full object-cover object-center opacity-75 lg:opacity-90"
-                data-alt="Natural-light editorial photograph of a focused laboratory scientist in a crisp white lab coat and blue nitrile gloves examining diagnostic samples under a modern microscope in a bright, clean clinical laboratory, soft depth of field, cool neutral and subtle sage tones, high-clarity institutional healthcare photography"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRwGfHrtE2yx4EMGNOX17737H1vH3idqcE_ieX8mlbpfd5ZLfepMYrb2N4qPpU66YzM-S-R_qy8E4tdZsGGURzeh0D2KBn4MYvQQssDnN5XvxXru43dm6_R-u-0CLphn0QMOnP9wvAy2pa9j7BJvoG3V1UFEoYxYiiXfClAJp7S2I6l1rBRWxQvFiEZ5xDexqJpf0anngRK9Hl-R3teDbiYIa78SVomGNanOrNc9w"
+                className="w-full h-full object-cover object-[75%_20%] opacity-60 lg:opacity-100"
+                alt="Laboratory professional in blue scrubs and gloves holding a blood collection tube and a rack of sample tubes"
+                src="/lab_attendant_model.jpeg"
+                fetchPriority="high"
+                decoding="async"
               />
+              {/* Horizontal fade: text side blends into the image */}
               <div className="absolute inset-0 bg-linear-to-r from-inverse-surface via-inverse-surface/80 to-transparent"></div>
+              {/* Mobile-only vertical overlay for text legibility */}
               <div className="absolute inset-0 bg-linear-to-t from-inverse-surface/60 via-transparent to-inverse-surface/30 lg:hidden"></div>
             </div>
           </div>
+
           <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-24 lg:py-36">
             <div className="max-w-2xl flex flex-col gap-6">
               <h1 className="font-display-lg text-display-lg text-on-primary">
@@ -58,13 +63,13 @@ export default function HomePage() {
                 Connecting Laboratories. Empowering Professionals. Advancing Global Health.
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <a
+                <Link
                   className="inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-7 py-3.5 transition-colors shadow-md"
                   data-path="partner-with-us"
-                  href="#"
+                  href="/contact"
                 >
                   Partner With Us
-                </a>
+                </Link>
                 <a
                   className="inline-flex items-center justify-center rounded-full bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-lg text-label-lg px-7 py-3.5 transition-colors shadow-md"
                   href="#our-solutions"
@@ -417,7 +422,7 @@ export default function HomePage() {
               </a>
               <a
                 className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all"
-                href="/contact"
+                href="tel:+2348032424965"
               >
                 Speak to a Specialist
               </a>

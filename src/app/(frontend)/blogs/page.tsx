@@ -18,7 +18,7 @@ export default function BlogsPage() {
                 "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLPR2KkhQJ4If6pwmkJkJfKATGjRq2Ntw_gVeYOGTND2w9sIhICqEhFOYrl2FpQ-txHG3mlxpsvHXWXbyi8KxS2F4sO8MMQrbU1DcmiKyxozPSmT3yR3YLhRKTgmZUgGJpOoV8NUu_dneT0xYJQLjq8WieGdDXKKO6OdcGu7hdwHLNjwirHQ5uVq6dK_AcIK5yJHLUt8ygNPEnmXSG990_-DgfVnMHkCFeRm1G8FU')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-inverse-surface via-inverse-surface/90 to-inverse-surface/75"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-inverse-surface via-inverse-surface/90 to-inverse-surface/75"></div>
           <div className="relative max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-6">
             {/* Breadcrumb */}
             <nav
@@ -133,7 +133,7 @@ export default function BlogsPage() {
             {/* Asymmetrical Featured Bento Card */}
             <article className="bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 group cursor-pointer">
               {/* Visual Column (5 Cols) */}
-              <div className="relative lg:col-span-5 min-h-[300px] lg:min-h-full overflow-hidden bg-surface-container">
+              <div className="relative lg:col-span-5 min-h-75 lg:min-h-full overflow-hidden bg-surface-container">
                 <a href="/blogs/single" className="block w-full h-full">
                   <img
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
@@ -239,7 +239,7 @@ export default function BlogsPage() {
                     [Quality Systems]
                   </span>
                 </div>
-                <div className="p-6 lg:p-7 flex flex-col flex-grow justify-between gap-6">
+                <div className="p-6 lg:p-7 flex flex-col grow justify-between gap-6">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
                       <span>[November 12, 2026]</span>
@@ -286,7 +286,7 @@ export default function BlogsPage() {
                     [AMR Surveillance]
                   </span>
                 </div>
-                <div className="p-6 lg:p-7 flex flex-col flex-grow justify-between gap-6">
+                <div className="p-6 lg:p-7 flex flex-col grow justify-between gap-6">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
                       <span>[November 04, 2026]</span>
@@ -332,7 +332,7 @@ export default function BlogsPage() {
                     [Workforce Training]
                   </span>
                 </div>
-                <div className="p-6 lg:p-7 flex flex-col flex-grow justify-between gap-6">
+                <div className="p-6 lg:p-7 flex flex-col grow justify-between gap-6">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
                       <span>[October 28, 2026]</span>
@@ -378,7 +378,7 @@ export default function BlogsPage() {
                     [Technology Transfer]
                   </span>
                 </div>
-                <div className="p-6 lg:p-7 flex flex-col flex-grow justify-between gap-6">
+                <div className="p-6 lg:p-7 flex flex-col grow justify-between gap-6">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
                       <span>[October 19, 2026]</span>
@@ -425,7 +425,7 @@ export default function BlogsPage() {
                     [Diagnostic Scale-Up]
                   </span>
                 </div>
-                <div className="p-6 lg:p-7 flex flex-col flex-grow justify-between gap-6">
+                <div className="p-6 lg:p-7 flex flex-col grow justify-between gap-6">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
                       <span>[October 08, 2026]</span>
@@ -471,7 +471,7 @@ export default function BlogsPage() {
                     [Biorepository]
                   </span>
                 </div>
-                <div className="p-6 lg:p-7 flex flex-col flex-grow justify-between gap-6">
+                <div className="p-6 lg:p-7 flex flex-col grow justify-between gap-6">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
                       <span>[September 27, 2026]</span>
@@ -572,7 +572,7 @@ export default function BlogsPage() {
                 "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxlqowgv4OfU-AooNq1oXcC5N0dAcALOsVyIZDlWaiCvT07YU65URwP0zexlv1x93i7yIYsI1lOMO95CI0VFOCSdHdPdiZ-4Arf9sRzWJOnEpej75zyZX2rRr0noWXqjVwYZ2zJD0Tr5UF9m0ypcBOE-woO5Nc13iEpD3V9gzplh6-SCyfsEKG3eGSb0-WW-Lr7adapRN4oOYI9PXmQG31Is24tcda_Zbc6F6SJZc')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-inverse-surface via-inverse-surface/90 to-inverse-surface/85"></div>
           <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold mb-4 inline-block">
               Collaborative Healthcare Innovation
@@ -594,7 +594,7 @@ export default function BlogsPage() {
               </a>
               <a
                 className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all"
-                href="/contact"
+                href="tel:+2348032424965"
               >
                 Speak to a Specialist
               </a>

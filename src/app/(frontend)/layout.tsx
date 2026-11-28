@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import './styles.css'
 
 export const metadata: Metadata = {
-  title: 'Global LabConnect',
+  title: 'Global Lab Connect',
   description:
     'Global LabConnect connects diagnostic laboratories, medical research institutions, and international healthcare partners.',
   icons: {

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="regulatory ethics support">
+<circle cx="64" cy="64" r="60" fill="#F4F8F5" stroke="#008A27" stroke-width="4"/>
+<g fill="none" stroke="#1A1D1A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M41 38 V94" stroke-width="4"/>
+<path d="M30 96 H52" stroke-width="5"/>
+<circle cx="41" cy="35" r="4" fill="#008A27" stroke="none"/>
+<path d="M24 44 H58" stroke-width="4"/>
+<path d="M24 44 L17 66 H31 Z M58 44 L51 66 H65 Z" stroke-width="2.5"/>
+<path d="M15 66 Q24 79 33 66 Z M49 66 Q58 79 67 66 Z" fill="#008A27" stroke-width="3"/>
+<rect x="72" y="32" width="34" height="54" rx="3" fill="#FFFFFF"/>
+<path d="M79 44 H99 M79 52 H99 M79 60 H92" stroke="#556058" stroke-width="3"/>
+<path d="M84 78 L82 94 L89 89 L96 94 L94 78 Z" fill="#8B0000" stroke="none"/>
+<circle cx="89" cy="76" r="8" fill="#8B0000" stroke="#FFFFFF" stroke-width="2.5"/>
+<path d="M85.5 76 l2.5 2.5 l4.5 -5" stroke="#FFFFFF" stroke-width="2.2"/>
+</g>
+</svg>

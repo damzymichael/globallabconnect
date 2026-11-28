@@ -273,9 +273,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center font-bold text-title-lg shrink-0">
-                        01
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                        <Icon name="school" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">
                           Pillar 01
@@ -284,9 +284,6 @@ export default function ServicesPage() {
                           Laboratory Capacity Development
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <Icon name="school" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -365,9 +362,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center font-bold text-title-lg shrink-0">
-                        02
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
+                        <Icon name="precision_manufacturing" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">
                           Pillar 02
@@ -376,9 +373,6 @@ export default function ServicesPage() {
                           Equipment Support &amp; Technology Transfer
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <Icon name="precision_manufacturing" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -466,9 +460,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center font-bold text-title-lg shrink-0">
-                        03
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                        <Icon name="verified" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">
                           Pillar 03
@@ -477,9 +471,6 @@ export default function ServicesPage() {
                           Quality Management Systems
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <Icon name="verified" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -549,9 +540,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center font-bold text-title-lg shrink-0">
-                        04
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
+                        <Icon name="biotech" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">
                           Pillar 04
@@ -560,9 +551,6 @@ export default function ServicesPage() {
                           Diagnostic Services &amp; Assay Scale-Up
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <Icon name="biotech" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -641,9 +629,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center font-bold text-title-lg shrink-0">
-                        05
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                        <Icon name="shield" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">
                           Pillar 05
@@ -652,9 +640,6 @@ export default function ServicesPage() {
                           Biosafety &amp; Biosecurity
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <Icon name="shield" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -706,9 +691,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center font-bold text-title-lg shrink-0">
-                        06
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
+                        <Icon name="inventory_2" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">
                           Pillar 06
@@ -717,9 +702,6 @@ export default function ServicesPage() {
                           Biorepository Development
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <Icon name="inventory_2" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -762,9 +744,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center font-bold text-title-lg shrink-0">
-                        07
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                        <Icon name="science" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">
                           Pillar 07
@@ -773,9 +755,6 @@ export default function ServicesPage() {
                           Clinical Trial Laboratory Support
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <Icon name="science" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -827,9 +806,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center font-bold text-title-lg shrink-0">
-                        08
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
+                        <Icon name="policy" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">
                           Pillar 08
@@ -838,9 +817,6 @@ export default function ServicesPage() {
                           Regulatory &amp; Ethics Support
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <Icon name="policy" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -892,9 +868,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary-container flex items-center justify-center font-bold text-title-lg shrink-0">
-                        09
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+                        <Icon name="coronavirus" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">
                           Pillar 09
@@ -903,9 +879,6 @@ export default function ServicesPage() {
                           Antimicrobial Resistance Surveillance
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
-                      <Icon name="coronavirus" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-primary-container mb-6">
@@ -975,9 +948,9 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="w-12 h-12 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center font-bold text-title-lg shrink-0">
-                        10
-                      </span>
+                      <div className="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
+                        <Icon name="emergency" className="" />
+                      </div>
                       <div>
                         <span className="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">
                           Pillar 10
@@ -986,9 +959,6 @@ export default function ServicesPage() {
                           Outbreak Investigation &amp; Emergency Response
                         </h2>
                       </div>
-                    </div>
-                    <div className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shrink-0">
-                      <Icon name="emergency" className="" />
                     </div>
                   </div>
                   <p className="font-title-md text-title-md italic text-secondary mb-6">
@@ -1091,7 +1061,7 @@ export default function ServicesPage() {
               </a>
               <a
                 className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-white border-2 border-white/60 hover:border-white hover:bg-white/10 font-label-lg text-label-lg px-8 py-3.5 transition-all"
-                href="/contact"
+                href="tel:+2348032424965"
               >
                 Speak to a Specialist
               </a>
